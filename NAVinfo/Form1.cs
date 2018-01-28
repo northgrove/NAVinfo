@@ -24,5 +24,17 @@ namespace NAVinfo
             Hovedmeny hmeny = new Hovedmeny();
             hmeny.Show();
         }
+
+        private void opplæringToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://navno.sharepoint.com/Office365");
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            // laster passord.nav.no i eget browser vindu
+            byttpassord passordbytte = new byttpassord();
+            passordbytte.Show();
+        }
     }
 }

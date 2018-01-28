@@ -38,6 +38,7 @@
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.opplæringToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,13 +54,14 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
+            this.opplæringToolStripMenuItem,
             this.toolStripMenuItem2,
             this.toolStripMenuItem3,
             this.toolStripMenuItem4,
             this.toolStripMenuItem5,
             this.toolStripMenuItem6});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(204, 158);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(204, 180);
             // 
             // toolStripMenuItem1
             // 
@@ -91,12 +93,20 @@
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(203, 22);
             this.toolStripMenuItem5.Text = "Reset passord";
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
             this.toolStripMenuItem6.Size = new System.Drawing.Size(203, 22);
             this.toolStripMenuItem6.Text = "Reset outlookprofil";
+            // 
+            // opplæringToolStripMenuItem
+            // 
+            this.opplæringToolStripMenuItem.Name = "opplæringToolStripMenuItem";
+            this.opplæringToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.opplæringToolStripMenuItem.Text = "Opplæring";
+            this.opplæringToolStripMenuItem.Click += new System.EventHandler(this.opplæringToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -123,6 +133,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        private System.Windows.Forms.ToolStripMenuItem opplæringToolStripMenuItem;
     }
 }
 
