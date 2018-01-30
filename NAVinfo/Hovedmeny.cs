@@ -11,6 +11,7 @@ using System.Management;
 using System.Net;
 using System.Net.NetworkInformation;
 using Microsoft.Win32;
+using System.Diagnostics;
 
 namespace NAVinfo
 {
@@ -143,6 +144,79 @@ namespace NAVinfo
             }
         }
 
+        private void mapPrint()
+        {
+            listViewPrint.Columns.Add("Printer", 100);
+            listViewPrint.Columns.Add("Status", 200);
+
+            var print1 = Printer.IsPrinterInstalled("Fax");
+            if (print1)
+            {
+                string[] printer = { "Fax", "Tilkoblet" };
+                var listViewItem = new ListViewItem(printer);
+                listViewPrint.Items.Add(listViewItem);
+            }
+            else
+            {
+                string[] printer = { "Fax", "Frakoblet" };
+                var listViewItem = new ListViewItem(printer);
+                listViewPrint.Items.Add(listViewItem);
+            }
+
+            var print2 = Printer.IsPrinterInstalled("FargeDuplex");
+            if (print2)
+            {
+                string[] printer = { "FargeDuplex", "Tilkoblet" };
+                var listViewItem = new ListViewItem(printer);
+                listViewPrint.Items.Add(listViewItem);
+            }
+            else
+            {
+                string[] printer = { "FargeDuplex", "Frakoblet" };
+                var listViewItem = new ListViewItem(printer);
+                listViewPrint.Items.Add(listViewItem);
+            }
+            var print3 = Printer.IsPrinterInstalled("SortDuplex");
+            if (print3)
+            {
+                string[] printer = { "SortDuplex", "Tilkoblet" };
+                var listViewItem = new ListViewItem(printer);
+                listViewPrint.Items.Add(listViewItem);
+            }
+            else
+            {
+                string[] printer = { "SortDuplex", "Frakoblet" };
+                var listViewItem = new ListViewItem(printer);
+                listViewPrint.Items.Add(listViewItem);
+            }
+            var print4 = Printer.IsPrinterInstalled("FargeSimplex");
+            if (print4)
+            {
+                string[] printer = { "FargeSimplex", "Tilkoblet" };
+                var listViewItem = new ListViewItem(printer);
+                listViewPrint.Items.Add(listViewItem);
+            }
+            else
+            {
+                string[] printer = { "FargeSimplex", "Frakoblet" };
+                var listViewItem = new ListViewItem(printer);
+                listViewPrint.Items.Add(listViewItem);
+            }
+            var print5 = Printer.IsPrinterInstalled("SortSimplex");
+            if (print5)
+            {
+                string[] printer = { "SortSimplex", "Tilkoblet" };
+                var listViewItem = new ListViewItem(printer);
+                listViewPrint.Items.Add(listViewItem);
+            }
+            else
+            {
+                string[] printer = { "SortSimplex", "Frakoblet" };
+                var listViewItem = new ListViewItem(printer);
+                listViewPrint.Items.Add(listViewItem);
+            }
+
+        }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -151,14 +225,27 @@ namespace NAVinfo
                 case 1:
                     GetInstalledApps();
                     break;
-                case 4:
+                case 5:
                     lesEventlog();
+                    break;
+                case 3:
+                    mapPrint();
                     break;
             }
             
 
         }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+            var fargeduplex = Printer.AddPrinter("\\\\a01psvw005.adeo.no\\FargeDuplex IKSS");
+            Printer.AddPrinter("\\\\a01psvw005.adeo.no\\SortDuplex IKSS");
+
+            if (fargeduplex)
+            {
+
+            }
+        }
     }
 
     }
