@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hovedmeny));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -60,34 +61,47 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.Console = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.listView1 = new System.Windows.Forms.ListView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.eventLog1 = new System.Diagnostics.EventLog();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.label19 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
             this.listViewPrint = new System.Windows.Forms.ListView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.label20 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.eventLog1 = new System.Diagnostics.EventLog();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.Console.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
-            this.tabPage6.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.tabPage8.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -152,6 +166,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Reset";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label3
             // 
@@ -189,6 +204,7 @@
             this.button5.TabIndex = 8;
             this.button5.Text = "Reset";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label5
             // 
@@ -387,20 +403,22 @@
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             // 
-            // tabControl1
+            // Console
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(461, 372);
-            this.tabControl1.TabIndex = 14;
+            this.Console.Controls.Add(this.tabPage1);
+            this.Console.Controls.Add(this.tabPage2);
+            this.Console.Controls.Add(this.tabPage3);
+            this.Console.Controls.Add(this.tabPage6);
+            this.Console.Controls.Add(this.tabPage4);
+            this.Console.Controls.Add(this.tabPage5);
+            this.Console.Controls.Add(this.tabPage7);
+            this.Console.Controls.Add(this.tabPage8);
+            this.Console.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Console.Location = new System.Drawing.Point(0, 0);
+            this.Console.Name = "Console";
+            this.Console.SelectedIndex = 0;
+            this.Console.Size = new System.Drawing.Size(461, 372);
+            this.Console.TabIndex = 14;
             // 
             // tabPage1
             // 
@@ -460,6 +478,78 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Verktøy";
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.button8);
+            this.tabPage6.Controls.Add(this.label20);
+            this.tabPage6.Controls.Add(this.listViewPrint);
+            this.tabPage6.Controls.Add(this.label19);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(453, 346);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Print";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(289, 67);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(123, 41);
+            this.button8.TabIndex = 4;
+            this.button8.Text = "Installer alle skriverne";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(37, 299);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(283, 13);
+            this.label20.TabIndex = 3;
+            this.label20.Text = "Høyreklikk på skrivernavnet og kikk installer for å installere";
+            // 
+            // listViewPrint
+            // 
+            this.listViewPrint.ContextMenuStrip = this.contextMenuStrip1;
+            this.listViewPrint.Location = new System.Drawing.Point(31, 114);
+            this.listViewPrint.Name = "listViewPrint";
+            this.listViewPrint.Size = new System.Drawing.Size(381, 182);
+            this.listViewPrint.TabIndex = 2;
+            this.listViewPrint.UseCompatibleStateImageBehavior = false;
+            this.listViewPrint.View = System.Windows.Forms.View.Details;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(130, 48);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
+            this.toolStripMenuItem1.Text = "Installer";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(129, 22);
+            this.toolStripMenuItem2.Text = "Avinstaller";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(28, 98);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(109, 13);
+            this.label19.TabIndex = 1;
+            this.label19.Text = "Tilgjengelige skrivere:";
+            // 
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.Transparent;
@@ -498,84 +588,117 @@
             this.eventLog1.Log = "Application";
             this.eventLog1.SynchronizingObject = this;
             // 
-            // tabPage6
+            // tabPage7
             // 
-            this.tabPage6.Controls.Add(this.button8);
-            this.tabPage6.Controls.Add(this.label20);
-            this.tabPage6.Controls.Add(this.listViewPrint);
-            this.tabPage6.Controls.Add(this.label19);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(453, 346);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Print";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.tabPage7.Controls.Add(this.button10);
+            this.tabPage7.Controls.Add(this.button9);
+            this.tabPage7.Controls.Add(this.groupBox6);
+            this.tabPage7.Controls.Add(this.groupBox5);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(453, 346);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Strøm";
+            this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // label19
+            // groupBox5
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(28, 98);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(109, 13);
-            this.label19.TabIndex = 1;
-            this.label19.Text = "Tilgjengelige skrivere:";
+            this.groupBox5.Controls.Add(this.checkedListBox1);
+            this.groupBox5.Location = new System.Drawing.Point(9, 66);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(187, 195);
+            this.groupBox5.TabIndex = 0;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Oppførsel for deksel når maskinen er tilkoblet strøm";
             // 
-            // listViewPrint
+            // groupBox6
             // 
-            this.listViewPrint.ContextMenuStrip = this.contextMenuStrip1;
-            this.listViewPrint.Location = new System.Drawing.Point(31, 114);
-            this.listViewPrint.Name = "listViewPrint";
-            this.listViewPrint.Size = new System.Drawing.Size(381, 182);
-            this.listViewPrint.TabIndex = 2;
-            this.listViewPrint.UseCompatibleStateImageBehavior = false;
-            this.listViewPrint.View = System.Windows.Forms.View.Details;
+            this.groupBox6.Controls.Add(this.checkedListBox2);
+            this.groupBox6.Location = new System.Drawing.Point(245, 66);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(187, 195);
+            this.groupBox6.TabIndex = 1;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Oppførsel for deksel når maskinen går på batteri";
             // 
-            // contextMenuStrip1
+            // checkedListBox1
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(130, 48);
+            this.checkedListBox1.CheckOnClick = true;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Modus 1: Ikke gjør noe",
+            "Modus 2: Ventemodus",
+            "Modus 3: Dvalemodus",
+            "Modus 4; Avslutt"});
+            this.checkedListBox1.Location = new System.Drawing.Point(7, 36);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(174, 154);
+            this.checkedListBox1.TabIndex = 0;
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
-            // toolStripMenuItem1
+            // checkedListBox2
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
-            this.toolStripMenuItem1.Text = "Installer";
+            this.checkedListBox2.CheckOnClick = true;
+            this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.Items.AddRange(new object[] {
+            "Modus 5: Ikke gjør noe",
+            "Modus 6: Ventemodus",
+            "Modus 7: Dvalemodus",
+            "Modus 8; Avslutt"});
+            this.checkedListBox2.Location = new System.Drawing.Point(6, 36);
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(174, 154);
+            this.checkedListBox2.TabIndex = 1;
+            this.checkedListBox2.SelectedIndexChanged += new System.EventHandler(this.checkedListBox2_SelectedIndexChanged);
             // 
-            // toolStripMenuItem2
+            // button9
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(129, 22);
-            this.toolStripMenuItem2.Text = "Avinstaller";
+            this.button9.Location = new System.Drawing.Point(350, 300);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 2;
+            this.button9.Text = "Lagre";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // label20
+            // button10
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(37, 299);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(283, 13);
-            this.label20.TabIndex = 3;
-            this.label20.Text = "Høyreklikk på skrivernavnet og kikk installer for å installere";
+            this.button10.Location = new System.Drawing.Point(9, 299);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(105, 23);
+            this.button10.TabIndex = 3;
+            this.button10.Text = "Reset til Standard";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // button8
+            // tabPage8
             // 
-            this.button8.Location = new System.Drawing.Point(289, 67);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(123, 41);
-            this.button8.TabIndex = 4;
-            this.button8.Text = "Installer alle skriverne";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.tabPage8.Controls.Add(this.textBox1);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(453, 346);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "Console";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(9, 22);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(436, 321);
+            this.textBox1.TabIndex = 0;
             // 
             // Hovedmeny
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(461, 372);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.Console);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Hovedmeny";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NAVinfo";
@@ -584,17 +707,22 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.Console.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
+            this.tabPage7.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -632,7 +760,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl Console;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
@@ -649,5 +777,14 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox checkedListBox2;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.TabPage tabPage8;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }
