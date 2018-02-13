@@ -106,6 +106,56 @@ namespace NAVinfo
 
         public string resetOutlook()
         {
+            var output = "";
+            var username = Environment.GetEnvironmentVariable("USERNAME");
+            RegistryKey NAVKey = Registry.CurrentUser.OpenSubKey(@"Software\NAV", true);
+            var email = NAVKey.GetValue("EmailLoggedonUser");
+            var userprofile = Environment.GetEnvironmentVariable("USERPROFILE");
+            var ostpath = userprofile + "\\appdata\\local\\microsoft\\outlook\\" + username + ".ost";
+
+            try
+            {
+               ExecuteCommand("pskill", "/accepteula outlook");
+                output += "Stengte Outlook #";
+            }
+            catch
+            {
+                output += "klarte ikke å strenge outlook #";
+            }
+            
+            try
+            {
+                ExecuteCommand("Powershell", @"remove-item HKCU:\SOFTWARE\Microsoft\Office\16.0\Outlook\Profiles\Outlook -Recurse -Force");
+                output += "fjernet outlook profil fra registry #";
+            }
+            catch
+            {
+                output += "klarte ikke å slette outlook profilen i registry #";
+            }
+
+            try
+            {
+                ExecuteCommand("c:\\windows\\staging\\profiler.exe", "Outlook " + email + " " + ostpath);
+                output += "Opprettet ny outlook profil #";
+            }
+            catch
+            {
+                output += "Klarte ikke å opprette ny profil #";
+            }
+
+            
+
+            try
+            {
+                //ExecuteCommand("c:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE", "");
+                //output += "Startet outlook på nytt #";
+            }
+            catch
+            {
+                output += "klarte ikke å starte outlook på nytt #";
+            }
+
+            /**
             using (PowerShell PS = PowerShell.Create())
             {
                 PS.AddScript(@"
@@ -117,6 +167,7 @@ namespace NAVinfo
 				                                FinnEpostadresse;
                                                 $ostpath = '$env:USERPROFILE\appdata\local\microsoft\outlook\$env:USERNAME.ost';
                                                 $result = Invoke - Command - ScriptBlock { c:\windows\staging\profiler.exe Outlook $awepost $ostpath};
+                                    };
                                  ResetOutlook;
                                 ");
 
@@ -130,9 +181,11 @@ namespace NAVinfo
 
                     }
                 }
-                return output;
+                **/
 
-            }
+            return output.ToString();
+
+            
         }
 
     }

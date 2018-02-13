@@ -31,11 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hovedmeny));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -77,16 +72,16 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.listView2 = new System.Windows.Forms.ListView();
-            this.eventLog1 = new System.Diagnostics.EventLog();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.eventLog1 = new System.Diagnostics.EventLog();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.Console.SuspendLayout();
@@ -97,70 +92,25 @@
             this.contextMenuStrip1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.tabPage7.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.tabPage8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(6, 123);
+            this.groupBox2.Location = new System.Drawing.Point(6, 24);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(435, 174);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lokale kommandoer";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Location = new System.Drawing.Point(6, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(435, 111);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "AirWatch informasjon";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(215, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Synkroniser";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Hent nye instillinger";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(215, 77);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Oppdater";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Oppdater informasjon om klient";
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(215, 160);
+            this.button3.Location = new System.Drawing.Point(215, 61);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 4;
@@ -171,7 +121,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 165);
+            this.label3.Location = new System.Drawing.Point(37, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 13);
             this.label3.TabIndex = 5;
@@ -179,7 +129,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(215, 204);
+            this.button4.Location = new System.Drawing.Point(215, 105);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 6;
@@ -190,7 +140,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 209);
+            this.label4.Location = new System.Drawing.Point(37, 110);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 13);
             this.label4.TabIndex = 7;
@@ -198,7 +148,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(215, 247);
+            this.button5.Location = new System.Drawing.Point(215, 148);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 8;
@@ -209,7 +159,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(37, 252);
+            this.label5.Location = new System.Drawing.Point(37, 153);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 13);
             this.label5.TabIndex = 9;
@@ -461,14 +411,9 @@
             this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Controls.Add(this.button3);
-            this.tabPage3.Controls.Add(this.button1);
-            this.tabPage3.Controls.Add(this.label1);
             this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.button5);
-            this.tabPage3.Controls.Add(this.label2);
             this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.groupBox1);
             this.tabPage3.Controls.Add(this.button4);
             this.tabPage3.Controls.Add(this.groupBox2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
@@ -583,11 +528,6 @@
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
             // 
-            // eventLog1
-            // 
-            this.eventLog1.Log = "Application";
-            this.eventLog1.SynchronizingObject = this;
-            // 
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.button10);
@@ -602,15 +542,25 @@
             this.tabPage7.Text = "Strøm";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // groupBox5
+            // button10
             // 
-            this.groupBox5.Controls.Add(this.checkedListBox1);
-            this.groupBox5.Location = new System.Drawing.Point(9, 66);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(187, 195);
-            this.groupBox5.TabIndex = 0;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Oppførsel for deksel når maskinen er tilkoblet strøm";
+            this.button10.Location = new System.Drawing.Point(9, 299);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(105, 23);
+            this.button10.TabIndex = 3;
+            this.button10.Text = "Reset til Standard";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(350, 300);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 2;
+            this.button9.Text = "Lagre";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // groupBox6
             // 
@@ -621,21 +571,6 @@
             this.groupBox6.TabIndex = 1;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Oppførsel for deksel når maskinen går på batteri";
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.CheckOnClick = true;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Modus 1: Ikke gjør noe",
-            "Modus 2: Ventemodus",
-            "Modus 3: Dvalemodus",
-            "Modus 4; Avslutt"});
-            this.checkedListBox1.Location = new System.Drawing.Point(7, 36);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(174, 154);
-            this.checkedListBox1.TabIndex = 0;
-            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // checkedListBox2
             // 
@@ -652,25 +587,30 @@
             this.checkedListBox2.TabIndex = 1;
             this.checkedListBox2.SelectedIndexChanged += new System.EventHandler(this.checkedListBox2_SelectedIndexChanged);
             // 
-            // button9
+            // groupBox5
             // 
-            this.button9.Location = new System.Drawing.Point(350, 300);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 2;
-            this.button9.Text = "Lagre";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.groupBox5.Controls.Add(this.checkedListBox1);
+            this.groupBox5.Location = new System.Drawing.Point(9, 66);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(187, 195);
+            this.groupBox5.TabIndex = 0;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Oppførsel for deksel når maskinen er tilkoblet strøm";
             // 
-            // button10
+            // checkedListBox1
             // 
-            this.button10.Location = new System.Drawing.Point(9, 299);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(105, 23);
-            this.button10.TabIndex = 3;
-            this.button10.Text = "Reset til Standard";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.checkedListBox1.CheckOnClick = true;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Modus 1: Ikke gjør noe",
+            "Modus 2: Ventemodus",
+            "Modus 3: Dvalemodus",
+            "Modus 4; Avslutt"});
+            this.checkedListBox1.Location = new System.Drawing.Point(7, 36);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(174, 154);
+            this.checkedListBox1.TabIndex = 0;
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // tabPage8
             // 
@@ -691,6 +631,11 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(436, 321);
             this.textBox1.TabIndex = 0;
+            // 
+            // eventLog1
+            // 
+            this.eventLog1.Log = "NAV";
+            this.eventLog1.SynchronizingObject = this;
             // 
             // Hovedmeny
             // 
@@ -717,12 +662,12 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.tabPage7.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -730,11 +675,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button4;

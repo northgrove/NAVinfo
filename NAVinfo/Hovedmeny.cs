@@ -116,13 +116,13 @@ namespace NAVinfo
         // Link til Office 365 hjelp
         private void button6_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://navno.sharepoint.com/Office365hjelp");
+            System.Diagnostics.Process.Start("https://navno.sharepoint.com/sites/Office365Hjelp");
         }
 
         // link til office 365 hjelp
         private void button7_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://navno.sharepoint.com/Office365hjelp");
+            System.Diagnostics.Process.Start("https://navno.sharepoint.com/sites/Office365Hjelp");
         }
 
 
@@ -178,25 +178,30 @@ namespace NAVinfo
         // Leser Eventloggen og viser i fane
         public void lesEventlog()
         {
-            listView2.Columns.Add("EventID", 100);
-            listView2.Columns.Add("Source", 100);
+            listView2.Sorting = SortOrder.Descending;
+            listView2.Columns.Add("ID", 25);
+            listView2.Columns.Add("Dato", 120);
+            listView2.Columns.Add("Source", 80);
             listView2.Columns.Add("Feil", 200);
             foreach (System.Diagnostics.EventLogEntry log in eventLog1.Entries)
             {
-                string[] arr = new string[3];
+                string[] arr = new string[4];
                 ListViewItem item;
                 arr[0] = log.InstanceId.ToString();
-                arr[1] = log.Source.ToString();
-                arr[2] = log.Message.ToString();
+                arr[1] = log.TimeGenerated.ToString();
+                arr[2] = log.Source.ToString();
+                arr[3] = log.Message.ToString();
                 item = new ListViewItem(arr);
                 listView2.Items.Add(item);
             }
+            
         }
 
 
         // Sjekker om NAV Skrivere er installert
         private void mapPrint()
         {
+            listViewPrint.Items.Clear();
             listViewPrint.Columns.Add("Printer", 100);
             listViewPrint.Columns.Add("Status", 200);
 
@@ -214,7 +219,7 @@ namespace NAVinfo
                 listViewPrint.Items.Add(listViewItem);
             }
 
-            var print2 = Printer.IsPrinterInstalled("FargeDuplex");
+            var print2 = Printer.IsPrinterInstalled("\\\\a01psvw005\\FargeDuplex IKSS");
             if (print2)
             {
                 string[] printer = { "FargeDuplex", "Tilkoblet" };
@@ -227,7 +232,7 @@ namespace NAVinfo
                 var listViewItem = new ListViewItem(printer);
                 listViewPrint.Items.Add(listViewItem);
             }
-            var print3 = Printer.IsPrinterInstalled("SortDuplex");
+            var print3 = Printer.IsPrinterInstalled("\\\\a01psvw005\\SortDuplex IKSS");
             if (print3)
             {
                 string[] printer = { "SortDuplex", "Tilkoblet" };
@@ -240,7 +245,7 @@ namespace NAVinfo
                 var listViewItem = new ListViewItem(printer);
                 listViewPrint.Items.Add(listViewItem);
             }
-            var print4 = Printer.IsPrinterInstalled("FargeSimplex");
+            var print4 = Printer.IsPrinterInstalled("\\\\a01psvw005\\FargeSimplex IKSS");
             if (print4)
             {
                 string[] printer = { "FargeSimplex", "Tilkoblet" };
@@ -253,7 +258,7 @@ namespace NAVinfo
                 var listViewItem = new ListViewItem(printer);
                 listViewPrint.Items.Add(listViewItem);
             }
-            var print5 = Printer.IsPrinterInstalled("SortSimplex");
+            var print5 = Printer.IsPrinterInstalled("\\\\a01psvw005\\SortSimplex IKSS");
             if (print5)
             {
                 string[] printer = { "SortSimplex", "Tilkoblet" };
@@ -318,8 +323,9 @@ namespace NAVinfo
         private void button8_Click(object sender, EventArgs e)
         {
             listViewPrint.Items.Clear();
+            
 
-                var status = "";
+            var status = "";
                 var fargeduplex = Printer.AddPrinter("\\\\a01psvw005.adeo.no\\FargeDuplex IKSS");
                     if (fargeduplex)
                     {
@@ -329,16 +335,58 @@ namespace NAVinfo
                     {
                         status = "feilet";
                     }
-                string[] printer = { "FargeDuplex", status };
-                var listViewItem = new ListViewItem(printer);
-                listViewPrint.Items.Add(listViewItem);
-     
-            
-            //Printer.AddPrinter("\\\\a01psvw005.adeo.no\\SortDuplex IKSS");
+            string[] printer = { "FargeDuplex", status };
+            var listViewItem = new ListViewItem(printer);
+            listViewPrint.Items.Add(listViewItem);
 
+
+            status = "";
+            var sortduplex = Printer.AddPrinter("\\\\a01psvw005.adeo.no\\SortDuplex IKSS");
+                if (sortduplex)
+                {
+                    status = "Tilkoblet";
+                }
+                else
+                {
+                    status = "feilet";
+                }
+            string[] printer2 = { "SortDuplex", status };
+            listViewItem = new ListViewItem(printer2);
+            listViewPrint.Items.Add(listViewItem);
+
+            status = "";
+            var sortsimplex = Printer.AddPrinter("\\\\a01psvw005.adeo.no\\SortSimplex IKSS");
+                if (sortsimplex)
+                {
+                    status = "Tilkoblet";
+                }
+                else
+                {
+                    status = "feilet";
+                }
+            string[] printer3 = { "SortSimplex", status };
+            listViewItem = new ListViewItem(printer3);
+            listViewPrint.Items.Add(listViewItem);
+
+            status = "";
+            var fargesimplex = Printer.AddPrinter("\\\\a01psvw005.adeo.no\\FargeSimplex IKSS");
+            if (fargesimplex)
+            {
+                status = "Tilkoblet";
+            }
+            else
+            {
+                status = "feilet";
+            }
+            string[] printer4 = { "FargeSimplex", status };
+            listViewItem = new ListViewItem(printer4);
+            listViewPrint.Items.Add(listViewItem);
 
         }
 
+
+
+        // Strøminstillinger
         private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (checkedListBox2.CheckedItems.Count > 1)
@@ -470,22 +518,22 @@ namespace NAVinfo
 
             try
             {
-                command.ExecuteCommand("pskill", "/accepteula outlook");
-                command.ExecuteCommand("Powershell", @"remove-item HKCU:\SOFTWARE\Microsoft\Office\16.0\Outlook\Profiles\Outlook -Recurse -Force");
+
 
                 textBox1.AppendText(command.resetOutlook());
 
 
 
-                command.ExecuteCommand(@"c:\Program Files (x86)\Microsoft Office\Office16\OUTLOOK.EXE", "");
+                
 
 
 
                 button5.Text = "Resatt OK";
             }
-            catch
+            catch (Exception err)
             {
                 button5.Text = "Feilet";
+                textBox1.AppendText(err.ToString());
             }
 
         }
