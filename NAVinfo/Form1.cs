@@ -44,13 +44,16 @@ namespace NAVinfo
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            // åpner hovedmenyen ved dobbeltklikk på tray-iconet
             Hovedmeny hmeny = new Hovedmeny();
             hmeny.Show();
         }
         private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
         {
+            //åpner hovedmenyen ved left-klikk på tray-iconet
             if (e.Button == MouseButtons.Left)
             {
+                
                 Hovedmeny hmeny = new Hovedmeny();
                 hmeny.Show();
             }

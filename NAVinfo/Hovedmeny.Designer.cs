@@ -443,7 +443,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(123, 41);
             this.button8.TabIndex = 4;
-            this.button8.Text = "Installer alle skriverne";
+            this.button8.Text = "Installer NAV skriverne";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -646,7 +646,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Hovedmeny";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NAVinfo";
+            this.Text = "NAV-Status";
             this.Load += new System.EventHandler(this.Hovedmeny_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();

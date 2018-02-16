@@ -155,33 +155,7 @@ namespace NAVinfo
                 output += "klarte ikke å starte outlook på nytt #";
             }
 
-            /**
-            using (PowerShell PS = PowerShell.Create())
-            {
-                PS.AddScript(@"
-                                function ResetOutlook{
 
-
-                                . c:\windows\staging\Functions.ps1;
-
-				                                FinnEpostadresse;
-                                                $ostpath = '$env:USERPROFILE\appdata\local\microsoft\outlook\$env:USERNAME.ost';
-                                                $result = Invoke - Command - ScriptBlock { c:\windows\staging\profiler.exe Outlook $awepost $ostpath};
-                                    };
-                                 ResetOutlook;
-                                ");
-
-                Collection<PSObject> PSoutput = PS.Invoke();
-                string output = "";
-                foreach (PSObject outputitem in PSoutput)
-                {
-                    if (outputitem != null)
-                    {
-                        output += outputitem.ToString();
-
-                    }
-                }
-                **/
 
             return output.ToString();
 

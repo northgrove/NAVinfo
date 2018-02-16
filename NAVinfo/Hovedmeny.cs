@@ -205,20 +205,6 @@ namespace NAVinfo
             listViewPrint.Columns.Add("Printer", 100);
             listViewPrint.Columns.Add("Status", 200);
 
-            var print1 = Printer.IsPrinterInstalled("Fax");
-            if (print1)
-            {
-                string[] printer = { "Fax", "Tilkoblet" };
-                var listViewItem = new ListViewItem(printer);
-                listViewPrint.Items.Add(listViewItem);
-            }
-            else
-            {
-                string[] printer = { "Fax", "Frakoblet" };
-                var listViewItem = new ListViewItem(printer);
-                listViewPrint.Items.Add(listViewItem);
-            }
-
             var print2 = Printer.IsPrinterInstalled("\\\\a01psvw005\\FargeDuplex IKSS");
             if (print2)
             {
@@ -326,7 +312,7 @@ namespace NAVinfo
             
 
             var status = "";
-                var fargeduplex = Printer.AddPrinter("\\\\a01psvw005.adeo.no\\FargeDuplex IKSS");
+                var fargeduplex = Printer.AddPrinter("\\\\a01psvw005\\FargeDuplex IKSS");
                     if (fargeduplex)
                     {
                         status = "Tilkoblet";
@@ -341,7 +327,7 @@ namespace NAVinfo
 
 
             status = "";
-            var sortduplex = Printer.AddPrinter("\\\\a01psvw005.adeo.no\\SortDuplex IKSS");
+            var sortduplex = Printer.AddPrinter("\\\\a01psvw005\\SortDuplex IKSS");
                 if (sortduplex)
                 {
                     status = "Tilkoblet";
@@ -355,7 +341,7 @@ namespace NAVinfo
             listViewPrint.Items.Add(listViewItem);
 
             status = "";
-            var sortsimplex = Printer.AddPrinter("\\\\a01psvw005.adeo.no\\SortSimplex IKSS");
+            var sortsimplex = Printer.AddPrinter("\\\\a01psvw005\\SortSimplex IKSS");
                 if (sortsimplex)
                 {
                     status = "Tilkoblet";
@@ -369,15 +355,15 @@ namespace NAVinfo
             listViewPrint.Items.Add(listViewItem);
 
             status = "";
-            var fargesimplex = Printer.AddPrinter("\\\\a01psvw005.adeo.no\\FargeSimplex IKSS");
-            if (fargesimplex)
-            {
-                status = "Tilkoblet";
-            }
-            else
-            {
-                status = "feilet";
-            }
+            var fargesimplex = Printer.AddPrinter("\\\\a01psvw005\\FargeSimplex IKSS");
+                if (fargesimplex)
+                {
+                    status = "Tilkoblet";
+                }
+                else
+                {
+                    status = "feilet";
+                }
             string[] printer4 = { "FargeSimplex", status };
             listViewItem = new ListViewItem(printer4);
             listViewPrint.Items.Add(listViewItem);
@@ -518,16 +504,7 @@ namespace NAVinfo
 
             try
             {
-
-
                 textBox1.AppendText(command.resetOutlook());
-
-
-
-                
-
-
-
                 button5.Text = "Resatt OK";
             }
             catch (Exception err)
