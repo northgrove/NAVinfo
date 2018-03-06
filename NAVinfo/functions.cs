@@ -61,6 +61,10 @@ namespace NAVinfo
 
         public string resetWiFi()
         {
+
+            return "wifi";
+            
+            /**
             using (PowerShell PS = PowerShell.Create() )
             {
                 PS.AddScript("Disable-NetAdapter -Name 'Wi-Fi'-Confirm:$false; ping localhost -n 1; Enable-NetAdapter -Name 'Wi-Fi'-Confirm:$false");
@@ -78,6 +82,8 @@ namespace NAVinfo
                 return output;
 
             }
+            **/
+
         }
 
         public string resetF5VPN()

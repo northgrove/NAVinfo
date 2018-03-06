@@ -15,7 +15,7 @@ namespace NAVinfo
         public Form1()
         {
             InitializeComponent();
-            
+            this.Hide();
 
         }
 

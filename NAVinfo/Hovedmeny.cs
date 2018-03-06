@@ -116,7 +116,7 @@ namespace NAVinfo
         // Link til Office 365 hjelp
         private void button6_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://navno.sharepoint.com/sites/Office365Hjelp");
+            System.Diagnostics.Process.Start("C:\\Windows\\Mob\\kom i gang.exe");
         }
 
         // link til office 365 hjelp
@@ -133,16 +133,13 @@ namespace NAVinfo
         {
             switch ((sender as TabControl).SelectedIndex)
             {
-                case 1:
-                    GetInstalledApps();
-                    break;
                 case 5:
                     lesEventlog();
                     break;
                 case 3:
                     mapPrint();
                     break;
-                case 6:
+                case 4:
                     openStrom();
                     break;
             }
@@ -152,7 +149,7 @@ namespace NAVinfo
 
 
 
-
+/**
         // Lister installerte applikasjoner og viser i fane
         public void GetInstalledApps()
         {
@@ -174,6 +171,7 @@ namespace NAVinfo
                 }
             }
         }
+**/
 
         // Leser Eventloggen og viser i fane
         public void lesEventlog()
@@ -544,8 +542,11 @@ namespace NAVinfo
         private void button3_Click(object sender, EventArgs e)
         {
             functions reset = new functions();
-            textBox1.AppendText(reset.resetWiFi()) ;
+            //textBox1.AppendText(reset.resetWiFi()) ;
             textBox1.AppendText(reset.resetF5VPN());
+            eventLog1.Source = "NAV-Status";
+            eventLog1.WriteEntry("Reset WiFi", EventLogEntryType.Information, 1 );
+
             button3.Text = "Resatt";
         }
     }
