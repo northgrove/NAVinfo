@@ -12,6 +12,7 @@ using System.Net;
 using System.Net.NetworkInformation;
 using Microsoft.Win32;
 using System.Diagnostics;
+using System.IO;
 
 namespace NAVinfo
 {
@@ -134,7 +135,7 @@ namespace NAVinfo
             switch ((sender as TabControl).SelectedIndex)
             {
                 case 5:
-                    lesEventlog();
+                    //lesEventlog();
                     break;
                 case 3:
                     mapPrint();
@@ -174,6 +175,7 @@ namespace NAVinfo
 **/
 
         // Leser Eventloggen og viser i fane
+        /**
         public void lesEventlog()
         {
             listView2.Sorting = SortOrder.Descending;
@@ -194,7 +196,12 @@ namespace NAVinfo
             }
             
         }
+    **/
 
+        public void lesNAVlogger()
+        {
+
+        }
 
         // Sjekker om NAV Skrivere er installert
         private void mapPrint()
@@ -548,6 +555,36 @@ namespace NAVinfo
             eventLog1.WriteEntry("Reset WiFi", EventLogEntryType.Information, 1 );
 
             button3.Text = "Resatt";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("c:\\windows\\notepad.exe", "c:\\temp\\NAV-User.log");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("c:\\windows\\notepad.exe", "c:\\temp\\NAV-System.log");
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (File.Exists(@"C:\temp\nav-user.log"))
+            {
+                File.Delete(@"c:\temp\nav-user.log");
+                            }
+
+            if (File.Exists(@"C:\temp\nav-system.log"))
+            {
+                File.Delete(@"c:\temp\nav-system.log");
+            }
+
+            button11.Text = "Slettet !!";
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

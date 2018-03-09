@@ -32,8 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hovedmeny));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -51,11 +54,14 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.Console = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.listViewPrint = new System.Windows.Forms.ListView();
@@ -64,6 +70,7 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.label19 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -71,18 +78,15 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.listView2 = new System.Windows.Forms.ListView();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.eventLog1 = new System.Diagnostics.EventLog();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -91,15 +95,16 @@
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -126,15 +131,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Reset nettverkstilkobling";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 143);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Endre NAV passord";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -143,6 +139,50 @@
             this.label5.Size = new System.Drawing.Size(98, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Reset OutlookProfil";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button3.Image = global::NAVinfo.Properties.Resources.wifi;
+            this.button3.Location = new System.Drawing.Point(209, 19);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(89, 79);
+            this.button3.TabIndex = 4;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button5.Image = global::NAVinfo.Properties.Resources.outlook;
+            this.button5.Location = new System.Drawing.Point(209, 213);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(100, 87);
+            this.button5.TabIndex = 8;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Image = global::NAVinfo.Properties.Resources.password;
+            this.button4.Location = new System.Drawing.Point(209, 104);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(89, 103);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Endre";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(31, 143);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Endre NAV passord";
             // 
             // label6
             // 
@@ -312,6 +352,26 @@
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             // 
+            // button7
+            // 
+            this.button7.Image = global::NAVinfo.Properties.Resources.office365;
+            this.button7.Location = new System.Drawing.Point(37, 52);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(99, 65);
+            this.button7.TabIndex = 3;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.Image = global::NAVinfo.Properties.Resources.Komigang1;
+            this.button6.Location = new System.Drawing.Point(254, 52);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 65);
+            this.button6.TabIndex = 2;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Console
             // 
             this.Console.Controls.Add(this.tabPage1);
@@ -378,6 +438,15 @@
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Print";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::NAVinfo.Properties.Resources.print1;
+            this.pictureBox1.Location = new System.Drawing.Point(31, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(93, 101);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // button8
             // 
@@ -451,6 +520,15 @@
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Strøm";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::NAVinfo.Properties.Resources.Laptopdeksel;
+            this.pictureBox2.Location = new System.Drawing.Point(169, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
             // 
             // button10
             // 
@@ -526,22 +604,15 @@
             // 
             this.tabPage5.BackColor = System.Drawing.Color.Transparent;
             this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage5.Controls.Add(this.listView2);
+            this.tabPage5.Controls.Add(this.groupBox1);
+            this.tabPage5.Controls.Add(this.button2);
+            this.tabPage5.Controls.Add(this.button1);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage5.Size = new System.Drawing.Size(453, 346);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Logger";
-            // 
-            // listView2
-            // 
-            this.listView2.Location = new System.Drawing.Point(7, 7);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(437, 330);
-            this.listView2.TabIndex = 0;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
             // 
             // tabPage8
             // 
@@ -578,78 +649,56 @@
             this.eventLog1.Log = "NAV";
             this.eventLog1.SynchronizingObject = this;
             // 
-            // button7
+            // button1
             // 
-            this.button7.Image = global::NAVinfo.Properties.Resources.office365;
-            this.button7.Location = new System.Drawing.Point(37, 52);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(99, 65);
-            this.button7.TabIndex = 3;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button1.Location = new System.Drawing.Point(63, 37);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 42);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Vis NAV-User.log";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button6
+            // button2
             // 
-            this.button6.Image = global::NAVinfo.Properties.Resources.Komigang1;
-            this.button6.Location = new System.Drawing.Point(254, 52);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 65);
-            this.button6.TabIndex = 2;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button2.Location = new System.Drawing.Point(254, 37);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(117, 42);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Vis NAV-System.log";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // groupBox1
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button3.Image = global::NAVinfo.Properties.Resources.wifi;
-            this.button3.Location = new System.Drawing.Point(209, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 79);
-            this.button3.TabIndex = 4;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.groupBox1.Controls.Add(this.button12);
+            this.groupBox1.Controls.Add(this.button11);
+            this.groupBox1.Location = new System.Drawing.Point(19, 142);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(404, 181);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Avansert:";
             // 
-            // button5
+            // button11
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Image = global::NAVinfo.Properties.Resources.outlook;
-            this.button5.Location = new System.Drawing.Point(209, 213);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 87);
-            this.button5.TabIndex = 8;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button11.Location = new System.Drawing.Point(235, 41);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(117, 45);
+            this.button11.TabIndex = 0;
+            this.button11.Text = "Slett logger";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
-            // button4
+            // button12
             // 
-            this.button4.Image = global::NAVinfo.Properties.Resources.password;
-            this.button4.Location = new System.Drawing.Point(209, 104);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(89, 103);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Endre";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::NAVinfo.Properties.Resources.print1;
-            this.pictureBox1.Location = new System.Drawing.Point(31, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(93, 101);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::NAVinfo.Properties.Resources.Laptopdeksel;
-            this.pictureBox2.Location = new System.Drawing.Point(169, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.button12.Location = new System.Drawing.Point(235, 118);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(117, 47);
+            this.button12.TabIndex = 1;
+            this.button12.Text = "Send logger til brukerstøtte";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // Hovedmeny
             // 
@@ -674,16 +723,17 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -722,7 +772,6 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Diagnostics.EventLog eventLog1;
-        private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.ListView listViewPrint;
         private System.Windows.Forms.Label label19;
@@ -743,5 +792,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button11;
     }
 }
