@@ -26,7 +26,7 @@ namespace NAVinfo
                 oPrinterClass.InvokeMethod("AddPrinterConnection", oInputParameters, null);
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }

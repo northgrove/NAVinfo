@@ -13,6 +13,10 @@ using System.Net.NetworkInformation;
 using Microsoft.Win32;
 using System.Diagnostics;
 using System.IO;
+using System.IO.Compression;
+using System.Deployment.Application;
+using Outlook = Microsoft.Office.Interop.Outlook;
+
 
 namespace NAVinfo
 {
@@ -38,10 +42,26 @@ namespace NAVinfo
             {
                 HKCU.CreateSubKey(@"Software\NAVinfo");
            
+            };
+
+
+            // Setter versjonsinfo
+
+            if (System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed)
+            {
+                label21.Text = System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
             }
 
-            
+            label24.Text = Environment.OSVersion.ToString();
+
+
         }
+
+
+
+
+       
+
 
         private void Hovedmeny_Load(object sender, EventArgs e)
         {
@@ -584,8 +604,121 @@ namespace NAVinfo
 
         private void button12_Click(object sender, EventArgs e)
         {
+            // Samler NAV logger
+            var bruker = Environment.UserName;
+            
+            try
+            {
+                if(!(Directory.Exists("C:\\temp\\logger")))
+                {
+                    System.IO.Directory.CreateDirectory("C:\\temp\\logger");
+                }
+                    
+                File.Copy("C:\\temp\\NAV-user.log", "C:\\temp\\logger\\NAV-user.log", true);
+                File.Copy("C:\\temp\\NAV-system.log", "C:\\temp\\logger\\NAV-system.log", true);
+               
+            }
+            catch (Exception ex)
+            {
+                textBox1.Text += "Klarte ikke å kopiere NAV-User.log og NAV-System.log: " +ex;
+            }
+
+            //samler Application eventloggen
+            try
+            {
+                EventLog evtLog = new EventLog("Application");  // Event Log type
+                evtLog.MachineName = ".";  // dot is local machine
+                string path = "C:\\temp\\logger\\Application.log";
+                if (File.Exists(path))
+                {
+                    File.Delete(path);
+                }
+
+                
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    foreach (EventLogEntry evtEntry in evtLog.Entries)
+                    {
+                        if (evtEntry.TimeWritten > DateTime.Now.AddDays(-1))
+                        {
+                            sw.WriteLine(evtEntry.TimeWritten + "#" + evtEntry.EntryType.ToString() + "#" + evtEntry.Source.ToString() + "#" + evtEntry.Message.ToString() + ";");
+
+                        }
+
+
+
+                    }
+                }
+
+                evtLog.Close();
+            }
+            catch (Exception ex)
+            {
+                textBox1.Text += "Klarte ikke å hente inn application event loggen" + ex;
+            }
+
+            //SAmler System evnt loggen
+            try
+            {
+                EventLog evtLog = new EventLog("System");  // Event Log type
+                evtLog.MachineName = ".";  // dot is local machine
+                string path = "C:\\temp\\logger\\System.log";
+                if (File.Exists(path))
+                {
+                    File.Delete(path);
+                }
+                int count = 0;
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    foreach (EventLogEntry evtEntry in evtLog.Entries)
+                    {
+
+                        if (evtEntry.TimeWritten > DateTime.Now.AddDays(-1))
+                        {
+                            sw.WriteLine(evtEntry.TimeWritten + "#" + evtEntry.EntryType.ToString() + "#" + evtEntry.Source.ToString() + "#" + evtEntry.Message.ToString() + ";");
+
+                        }
+
+                    }
+                }
+
+                evtLog.Close();
+            }
+            catch (Exception ex)
+            {
+                textBox1.Text += "Klarte ikke å hente inn System event loggen " + ex;
+            }
+
+
+            try
+            {
+
+                Random rnd = new Random();
+                int random = rnd.Next(1, 999999);
+
+
+                System.IO.Compression.ZipFile.CreateFromDirectory("C:\\temp\\logger", "c:\\temp\\logger_" + random + ".zip");
+
+
+
+                Outlook.Application app = new Outlook.Application();
+                Outlook.MailItem mailItem = app.CreateItem(Outlook.OlItemType.olMailItem);
+                //Outlook.MailItem mailItem = (Outlook.MailItem)app.CreateItem(Outlook.OlItemType.olMailItem);
+                mailItem.Subject = "Diagnostic informasjon fra " + Environment.MachineName + " " + bruker;
+                //mailItem.To = "someone@example.com";
+                //mailItem.Body = "This is the message.";
+                mailItem.Attachments.Add("c:\\temp\\logger_" + random + ".zip");
+                mailItem.Importance = Outlook.OlImportance.olImportanceLow;
+                mailItem.Display(true);
+            }
+            catch (Exception ex)
+            {
+                textBox1.Text += "Klarte ikke å lage mail til brukerstøtte " + ex;
+            }
 
         }
+
+
     }
 
     }

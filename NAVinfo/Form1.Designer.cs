@@ -53,6 +53,7 @@
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.opplæringToolStripMenuItem,
@@ -60,14 +61,14 @@
             this.toolStripMenuItem5,
             this.toolStripMenuItem6});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(227, 124);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(383, 214);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(226, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(382, 42);
             this.toolStripMenuItem1.Text = "Åpne";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -75,7 +76,7 @@
             // 
             this.opplæringToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.opplæringToolStripMenuItem.Name = "opplæringToolStripMenuItem";
-            this.opplæringToolStripMenuItem.Size = new System.Drawing.Size(226, 24);
+            this.opplæringToolStripMenuItem.Size = new System.Drawing.Size(382, 42);
             this.opplæringToolStripMenuItem.Text = "Opplæring";
             this.opplæringToolStripMenuItem.Click += new System.EventHandler(this.opplæringToolStripMenuItem_Click);
             // 
@@ -83,14 +84,14 @@
             // 
             this.toolStripMenuItem4.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(226, 24);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(382, 42);
             this.toolStripMenuItem4.Text = "Reset nettverkstilkobling";
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(226, 24);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(382, 42);
             this.toolStripMenuItem5.Text = "Reset passord";
             this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
@@ -98,17 +99,22 @@
             // 
             this.toolStripMenuItem6.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(226, 24);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(382, 42);
             this.toolStripMenuItem6.Text = "Reset outlookprofil";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(268, 212);
+            this.ClientSize = new System.Drawing.Size(232, 0);
+            this.ControlBox = false;
+            this.Enabled = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Form1";
+            this.Opacity = 0D;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "NAV-Status";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.contextMenuStrip1.ResumeLayout(false);
