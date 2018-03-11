@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Management.Automation;
 using System.Collections.ObjectModel;
+using System.Net;
 
 
 namespace NAVinfo
@@ -166,6 +167,25 @@ namespace NAVinfo
             return output.ToString();
 
             
+        }
+
+
+        public static bool CheckForInternetConnection()
+        {
+            try
+            {
+                using (var client = new WebClient())
+                {
+                    using (client.OpenRead("http://clients3.google.com/generate_204"))
+                    {
+                        return true;
+                    }
+                }
+            }
+            catch
+            {
+                return false;
+            }
         }
 
     }

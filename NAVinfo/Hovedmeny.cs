@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ using Microsoft.Win32;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
+using System.Runtime.InteropServices;
 using System.Deployment.Application;
 using Outlook = Microsoft.Office.Interop.Outlook;
 
@@ -94,11 +96,13 @@ namespace NAVinfo
 
             // Sjekker om det finnes en aktiv nettverkstilkobling
             bool connection = NetworkInterface.GetIsNetworkAvailable();
+            
             if (connection == true)
 
             {
                 labelwifi.BackColor = Color.Green;
                 labelwifi.Text = "Tilkoblet";
+
             }
             else
             {
@@ -106,9 +110,21 @@ namespace NAVinfo
                 labelwifi.Text = "Ikke tilkoblet";
             }
 
+            // sjekker internett forbindelse
+            if (functions.CheckForInternetConnection())
+            {
+                labelinet.BackColor = Color.Green;
+                labelinet.Text = "Tilkoblet";
+            }
+            else
+            {
+                labelinet.BackColor = Color.Red;
+                labelinet.Text = "Ikke tilkoblet";
+            }
+
             // Sjekker om betteriet har status "lader"
-            var battery = BatteryChargeStatus.Charging;
-            if (battery.ToString() == "Charging")
+            var strom = SystemInformation.PowerStatus.PowerLineStatus.ToString();
+            if (strom == "Online")
             {
                 labelstrom.BackColor = Color.Green;
                 labelstrom.Text = "Tilkoblet";
@@ -119,7 +135,8 @@ namespace NAVinfo
                 labelstrom.Text = "Ikke tilkoblet";
             }
 
-
+            // pålogget bruker:
+            label13.Text = Environment.UserName;
 
 
 
@@ -599,6 +616,17 @@ namespace NAVinfo
                 File.Delete(@"c:\temp\nav-system.log");
             }
 
+            if (Directory.Exists(@"C:\temp\logger"))
+            {
+                Directory.Delete(@"c:\temp\logger", true);
+            }
+
+            foreach (string f in Directory.EnumerateFiles(@"c:\temp\", "logger*.zip"))
+            {
+                File.Delete(f);
+            }
+
+
             button11.Text = "Slettet !!";
         }
 
@@ -667,7 +695,7 @@ namespace NAVinfo
                 {
                     File.Delete(path);
                 }
-                int count = 0;
+                
                 using (StreamWriter sw = File.CreateText(path))
                 {
                     foreach (EventLogEntry evtEntry in evtLog.Entries)
@@ -689,6 +717,31 @@ namespace NAVinfo
                 textBox1.Text += "Klarte ikke å hente inn System event loggen " + ex;
             }
 
+            var sysinfofile = "C:\\temp\\sysinfo.cmd";
+            try
+            {
+                if (!(File.Exists(sysinfofile)))
+                {
+                    File.WriteAllText(sysinfofile, "systeminfo >> c:\\temp\\logger\\systeminfo.txt" + Environment.NewLine);
+                    File.AppendAllText(sysinfofile, "ipconfig /all >> c:\\temp\\logger\\ipconfig.txt" + Environment.NewLine);
+                    File.AppendAllText(sysinfofile, "tasklist >> c:\\temp\\logger\\tasklist.txt" + Environment.NewLine);
+                    File.AppendAllText(sysinfofile, "netsh wlan show interfaces >> c:\\temp\\logger\\wireless.txt" + Environment.NewLine);
+                    File.AppendAllText(sysinfofile, "netsh wlan show networks >> c:\\temp\\logger\\tilgjengeligeWlan.txt" + Environment.NewLine);
+                    File.AppendAllText(sysinfofile, "wmic startup >> c:\\temp\\logger\\startup.txt" + Environment.NewLine);
+
+
+
+                }
+                System.Diagnostics.Process.Start(sysinfofile).WaitForExit(15000);
+            }
+            catch (Exception ex)
+            {
+                textBox1.Text += "Samling av SysInf feilet" + ex;
+            }
+
+
+
+
 
             try
             {
@@ -702,6 +755,7 @@ namespace NAVinfo
 
 
                 Outlook.Application app = new Outlook.Application();
+                
                 Outlook.MailItem mailItem = app.CreateItem(Outlook.OlItemType.olMailItem);
                 //Outlook.MailItem mailItem = (Outlook.MailItem)app.CreateItem(Outlook.OlItemType.olMailItem);
                 mailItem.Subject = "Diagnostic informasjon fra " + Environment.MachineName + " " + bruker;
@@ -710,6 +764,14 @@ namespace NAVinfo
                 mailItem.Attachments.Add("c:\\temp\\logger_" + random + ".zip");
                 mailItem.Importance = Outlook.OlImportance.olImportanceLow;
                 mailItem.Display(true);
+
+                File.Delete("c:\\temp\\logger_" + random + ".zip");
+
+                if (Directory.Exists(@"C:\temp\logger"))
+                {
+                    Directory.Delete(@"c:\temp\logger", true);
+                }
+
             }
             catch (Exception ex)
             {
@@ -718,7 +780,54 @@ namespace NAVinfo
 
         }
 
+        private void button13_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("ms-settings:printers");
+        }
 
+        private void button14_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("ms-settings:powersleep");
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("companyportal:");
+        }
+
+
+
+        private void button16_Click_1(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://forms.office.com/Pages/ResponsePage.aspx?id=NGU2YsMeYkmIaZtVNSedC00WkBGW6YxFtyQ4FAm2fj1UQzhONjlXT0U1SDBMWU9ZWktTVEdMMlFIVy4u");
+            
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            var command = new functions();
+            var resettSM = command.ExecuteCommand("powershell", "-executionpolicy bypass c:\\Windows\\Mob\\ResetStartmenyPS.ps1");
+
+            if (!(resettSM))
+            {
+                textBox1.Text = "Restting av Start-Menyen feilet";
+            }
+
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            ScreenCapture sc = new ScreenCapture();
+            // capture entire screen, and save it to a file
+            Image img = sc.CaptureScreen();
+            // display image in a Picture control named imageDisplay
+            this.pictureBox5.Image = img;
+            
+            // capture this window, and save it
+            //sc.CaptureWindowToFile(this.Handle, "C:\\temp\\logger\\screen.gif", ImageFormat.Gif);
+            sc.CaptureScreenToFile("C:\\temp\\logger\\screen.gif", ImageFormat.Gif);
+            
+        }
     }
 
     }

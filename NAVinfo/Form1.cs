@@ -23,6 +23,7 @@ namespace NAVinfo
         {
             Hovedmeny hmeny = new Hovedmeny();
             hmeny.Show();
+            hmeny.Activate();
         }
 
         private void opplæringToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,6 +48,7 @@ namespace NAVinfo
             // åpner hovedmenyen ved dobbeltklikk på tray-iconet
             Hovedmeny hmeny = new Hovedmeny();
             hmeny.Show();
+            hmeny.Activate();
         }
         private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
         {
@@ -56,6 +58,7 @@ namespace NAVinfo
                 
                 Hovedmeny hmeny = new Hovedmeny();
                 hmeny.Show();
+                hmeny.Activate();
             }
 
         }
