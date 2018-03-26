@@ -90,7 +90,8 @@ namespace NAVinfo
             IPAddress[] localIPs = Dns.GetHostAddresses(Dns.GetHostName());
             foreach (IPAddress addr in localIPs)
             {
-                label14.Text = label14.Text + addr + Environment.NewLine;
+                //label14.Text = label14.Text + addr + Environment.NewLine;
+                textBox2.Text += addr + Environment.NewLine;
             }
 
 
@@ -171,13 +172,13 @@ namespace NAVinfo
         {
             switch ((sender as TabControl).SelectedIndex)
             {
-                case 5:
+                case 6:
                     //lesEventlog();
                     break;
-                case 3:
+                case 4:
                     mapPrint();
                     break;
-                case 4:
+                case 5:
                     openStrom();
                     break;
             }
@@ -244,7 +245,7 @@ namespace NAVinfo
         private void mapPrint()
         {
             listViewPrint.Items.Clear();
-            listViewPrint.Columns.Add("Printer", 100);
+            listViewPrint.Columns.Add("Printer", 200);
             listViewPrint.Columns.Add("Status", 200);
 
             var print2 = Printer.IsPrinterInstalled("\\\\a01psvw005\\FargeDuplex IKSS");
@@ -547,11 +548,13 @@ namespace NAVinfo
             try
             {
                 textBox1.AppendText(command.resetOutlook());
+                button5.BackColor = Color.Green;
                 button5.Text = "Resatt OK";
             }
             catch (Exception err)
             {
                 button5.Text = "Feilet";
+                button5.BackColor = Color.Red;
                 textBox1.AppendText(err.ToString());
             }
 
@@ -591,7 +594,8 @@ namespace NAVinfo
             eventLog1.Source = "NAV-Status";
             eventLog1.WriteEntry("Reset WiFi", EventLogEntryType.Information, 1 );
 
-            button3.Text = "Resatt";
+            button3.Text = "Resatt OK";
+            button3.BackColor = Color.Green;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -807,9 +811,15 @@ namespace NAVinfo
         {
             var command = new functions();
             var resettSM = command.ExecuteCommand("powershell", "-executionpolicy bypass c:\\Windows\\Mob\\ResetStartmenyPS.ps1");
-
+            if(resettSM)
+            {
+                button17.BackColor = Color.Green;
+                button17.Text = "Resatt OK";
+            }
             if (!(resettSM))
             {
+                button17.BackColor = Color.Red;
+                button17.Text = "Feilet";
                 textBox1.Text = "Restting av Start-Menyen feilet";
             }
 
@@ -817,6 +827,11 @@ namespace NAVinfo
 
         private void button18_Click(object sender, EventArgs e)
         {
+            if (!(Directory.Exists("C:\\temp\\logger")))
+            {
+                System.IO.Directory.CreateDirectory("C:\\temp\\logger");
+            }
+
             ScreenCapture sc = new ScreenCapture();
             // capture entire screen, and save it to a file
             Image img = sc.CaptureScreen();
@@ -827,6 +842,37 @@ namespace NAVinfo
             //sc.CaptureWindowToFile(this.Handle, "C:\\temp\\logger\\screen.gif", ImageFormat.Gif);
             sc.CaptureScreenToFile("C:\\temp\\logger\\screen.gif", ImageFormat.Gif);
             
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft System Center\Configuration Manager\programvaresenter.lnk");
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label28_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+
+            button20.Text = "Resetter ...";
+            eventLog1.Source = "NAV-Status";
+            eventLog1.WriteEntry("Reset SCCM", EventLogEntryType.Information, 11);
+
+            button20.Text = "Resatt OK";
+            button20.BackColor = Color.Green;
         }
     }
 

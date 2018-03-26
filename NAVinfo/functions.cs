@@ -51,6 +51,43 @@ namespace NAVinfo
 
         }
 
+        public string getEmail(string exeDir, string args)
+        {
+            try
+            {
+                ProcessStartInfo procStartInfo = new ProcessStartInfo();
+
+                procStartInfo.FileName = exeDir;
+                procStartInfo.Arguments = args;
+                procStartInfo.RedirectStandardOutput = true;
+                procStartInfo.UseShellExecute = false;
+                procStartInfo.CreateNoWindow = true;
+
+                using (Process process = new Process())
+                {
+                    process.StartInfo = procStartInfo;
+                    process.Start();
+
+                    process.WaitForExit();
+
+                    string result = process.StandardOutput.ReadToEnd();
+                    Console.WriteLine(result);
+
+                    return result;
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("*** Error occured executing the following commands.");
+                Console.WriteLine(exeDir);
+                Console.WriteLine(args);
+                Console.WriteLine(ex.Message);
+                return ex.Message;
+            }
+
+
+        }
 
         public bool KeyExists(RegistryKey baseKey, string subKeyName)
         {
@@ -116,14 +153,18 @@ namespace NAVinfo
             var output = "";
             var username = Environment.GetEnvironmentVariable("USERNAME");
             RegistryKey NAVKey = Registry.CurrentUser.OpenSubKey(@"Software\NAV", true);
-            var email = NAVKey.GetValue("EmailLoggedonUser");
+            //var email = NAVKey.GetValue("EmailLoggedonUser").ToString();
+            //var email2 = email.Remove(email.Length - 2);
+            var email3 = getEmail("whoami", "/upn");
+            var email4 = System.Text.RegularExpressions.Regex.Replace(email3, "[^A-Za-z0-9.@]", "");
             var userprofile = Environment.GetEnvironmentVariable("USERPROFILE");
             var ostpath = userprofile + "\\appdata\\local\\microsoft\\outlook\\" + username + ".ost";
+
 
             try
             {
                ExecuteCommand("pskill", "/accepteula outlook");
-                output += "Stengte Outlook #";
+                output += "Stengte Outlook # ";
             }
             catch
             {
@@ -135,27 +176,30 @@ namespace NAVinfo
                 ExecuteCommand("Powershell", @"remove-item HKCU:\SOFTWARE\Microsoft\Office\16.0\Outlook\Profiles\Outlook -Recurse -Force");
                 output += "fjernet outlook profil fra registry #";
             }
-            catch
+            catch (Exception ex)
             {
-                output += "klarte ikke å slette outlook profilen i registry #";
+                output += "klarte ikke å slette outlook profilen i registry # " + ex;
             }
 
+            
             try
             {
-                ExecuteCommand("c:\\windows\\staging\\profiler.exe", "Outlook " + email + " " + ostpath);
+                ExecuteCommand("c:\\windows\\Nsystem\\profiler.exe", "Outlook " + email4 + " " + ostpath);
                 output += "Opprettet ny outlook profil #";
             }
             catch
             {
                 output += "Klarte ikke å opprette ny profil #";
             }
-
+        
             
 
             try
             {
                 //ExecuteCommand("c:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE", "");
-                //output += "Startet outlook på nytt #";
+                //ExecuteCommand("outlook", "");
+                System.Diagnostics.Process.Start("outlook");
+                output += "Startet outlook på nytt #";
             }
             catch
             {

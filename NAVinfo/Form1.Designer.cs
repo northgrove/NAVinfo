@@ -37,6 +37,7 @@
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.applikasjonerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,11 +58,12 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.opplæringToolStripMenuItem,
+            this.applikasjonerToolStripMenuItem,
             this.toolStripMenuItem4,
             this.toolStripMenuItem5,
             this.toolStripMenuItem6});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(383, 214);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(383, 300);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // toolStripMenuItem1
@@ -102,6 +104,14 @@
             this.toolStripMenuItem6.Size = new System.Drawing.Size(382, 42);
             this.toolStripMenuItem6.Text = "Reset outlookprofil";
             // 
+            // applikasjonerToolStripMenuItem
+            // 
+            this.applikasjonerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applikasjonerToolStripMenuItem.Name = "applikasjonerToolStripMenuItem";
+            this.applikasjonerToolStripMenuItem.Size = new System.Drawing.Size(382, 42);
+            this.applikasjonerToolStripMenuItem.Text = "Applikasjoner";
+            this.applikasjonerToolStripMenuItem.Click += new System.EventHandler(this.applikasjonerToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
@@ -131,6 +141,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem opplæringToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem applikasjonerToolStripMenuItem;
     }
 }
 

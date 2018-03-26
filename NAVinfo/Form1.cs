@@ -62,5 +62,10 @@ namespace NAVinfo
             }
 
         }
+
+        private void applikasjonerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft System Center\Configuration Manager\programvaresenter.lnk");
+        }
     }
 }
