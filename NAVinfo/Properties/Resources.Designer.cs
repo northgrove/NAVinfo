@@ -133,6 +133,16 @@ namespace NAVstatus.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap legg_til_skriver {
+            get {
+                object obj = ResourceManager.GetObject("legg til skriver", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mail {
             get {
                 object obj = ResourceManager.GetObject("mail", resourceCulture);
@@ -206,6 +216,16 @@ namespace NAVstatus.Properties {
         internal static System.Drawing.Bitmap Programvaresenter {
             get {
                 object obj = ResourceManager.GetObject("Programvaresenter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap søker_etter_skrivere {
+            get {
+                object obj = ResourceManager.GetObject("søker etter skrivere", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

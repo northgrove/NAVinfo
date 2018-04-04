@@ -66,7 +66,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button19 = new System.Windows.Forms.Button();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.button20 = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.button13 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -99,17 +104,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.button20 = new System.Windows.Forms.Button();
-            this.label29 = new System.Windows.Forms.Label();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -119,6 +119,8 @@
             this.groupBox7.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -132,8 +134,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.groupBox8.SuspendLayout();
-            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -520,7 +520,7 @@
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(90, 25);
             this.label21.TabIndex = 1;
-            this.label21.Text = "1.0.0.12";
+            this.label21.Text = "1.0.0.14";
             // 
             // label2
             // 
@@ -556,16 +556,67 @@
             this.tabPage2.TabIndex = 8;
             this.tabPage2.Text = "Applikasjoner";
             // 
-            // button19
+            // groupBox9
             // 
-            this.button19.BackgroundImage = global::NAVstatus.Properties.Resources.Programvaresenter;
-            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button19.Location = new System.Drawing.Point(420, 47);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(133, 130);
-            this.button19.TabIndex = 0;
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
+            this.groupBox9.Controls.Add(this.label29);
+            this.groupBox9.Controls.Add(this.button19);
+            this.groupBox9.Location = new System.Drawing.Point(3, 47);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(898, 379);
+            this.groupBox9.TabIndex = 6;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Administrer applikasjoner";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(71, 100);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(195, 25);
+            this.label29.TabIndex = 5;
+            this.label29.Text = "Programvaresenter";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.button20);
+            this.groupBox8.Controls.Add(this.label28);
+            this.groupBox8.Controls.Add(this.label14);
+            this.groupBox8.Location = new System.Drawing.Point(25, 472);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(857, 205);
+            this.groupBox8.TabIndex = 4;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Avanserte alternativer";
+            // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(557, 77);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(261, 84);
+            this.button20.TabIndex = 2;
+            this.button20.Text = "Reset SCCM";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(6, 136);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(463, 25);
+            this.label28.TabIndex = 1;
+            this.label28.Text = "(gjøres bare etter instruksjoner fra brukerstøtte)";
+            this.label28.Click += new System.EventHandler(this.label28_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(89, 101);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(136, 25);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Reset SCCM";
+            this.label14.Click += new System.EventHandler(this.label14_Click_1);
             // 
             // tabPage6
             // 
@@ -961,6 +1012,17 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button19
+            // 
+            this.button19.BackgroundImage = global::NAVstatus.Properties.Resources.Programvaresenter;
+            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button19.Location = new System.Drawing.Point(420, 47);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(133, 130);
+            this.button19.TabIndex = 0;
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::NAVstatus.Properties.Resources.printer;
@@ -1012,68 +1074,6 @@
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
             // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.button20);
-            this.groupBox8.Controls.Add(this.label28);
-            this.groupBox8.Controls.Add(this.label14);
-            this.groupBox8.Location = new System.Drawing.Point(25, 472);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(857, 205);
-            this.groupBox8.TabIndex = 4;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Avanserte alternativer";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(89, 101);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(136, 25);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Reset SCCM";
-            this.label14.Click += new System.EventHandler(this.label14_Click_1);
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(6, 136);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(463, 25);
-            this.label28.TabIndex = 1;
-            this.label28.Text = "(gjøres bare etter instruksjoner fra brukerstøtte)";
-            this.label28.Click += new System.EventHandler(this.label28_Click);
-            // 
-            // button20
-            // 
-            this.button20.Location = new System.Drawing.Point(557, 77);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(261, 84);
-            this.button20.TabIndex = 2;
-            this.button20.Text = "Reset SCCM";
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(71, 100);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(195, 25);
-            this.label29.TabIndex = 5;
-            this.label29.Text = "Programvaresenter";
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.label29);
-            this.groupBox9.Controls.Add(this.button19);
-            this.groupBox9.Location = new System.Drawing.Point(3, 47);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(898, 379);
-            this.groupBox9.TabIndex = 6;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Administrer applikasjoner";
-            // 
             // Hovedmeny
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
@@ -1100,6 +1100,10 @@
             this.groupBox7.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             this.tabPage7.ResumeLayout(false);
@@ -1117,10 +1121,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
 
         }
