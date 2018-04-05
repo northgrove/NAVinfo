@@ -14,6 +14,7 @@ namespace NAVinfo
     {
         public Form1()
         {
+            if (System.Diagnostics.Process.GetProcessesByName(System.IO.Path.GetFileNameWithoutExtension(System.Reflection.Assembly.GetEntryAssembly().Location)).Count() > 1) System.Diagnostics.Process.GetCurrentProcess().Kill();
             InitializeComponent();
             this.Hide();
 
@@ -65,7 +66,7 @@ namespace NAVinfo
 
         private void applikasjonerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(@"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft System Center\Configuration Manager\programvaresenter.lnk");
+            System.Diagnostics.Process.Start(@"softwarecenter:");
         }
     }
 }

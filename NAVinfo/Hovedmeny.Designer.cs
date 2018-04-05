@@ -31,8 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hovedmeny));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label27 = new System.Windows.Forms.Label();
+            this.button17 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -53,11 +57,14 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.Console = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button16 = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button15 = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -68,6 +75,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label29 = new System.Windows.Forms.Label();
+            this.button19 = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.button20 = new System.Windows.Forms.Button();
             this.label28 = new System.Windows.Forms.Label();
@@ -75,9 +83,11 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.button13 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listViewPrint = new System.Windows.Forms.ListView();
             this.label19 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button14 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -85,7 +95,9 @@
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.button18 = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.button12 = new System.Windows.Forms.Button();
@@ -93,23 +105,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.eventLog1 = new System.Diagnostics.EventLog();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -122,18 +122,18 @@
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -164,6 +164,20 @@
             this.label27.TabIndex = 11;
             this.label27.Text = "Reset Start-Meny";
             // 
+            // button17
+            // 
+            this.button17.BackgroundImage = global::NAVstatus.Properties.Resources.startmeny;
+            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button17.Location = new System.Drawing.Point(414, 449);
+            this.button17.Margin = new System.Windows.Forms.Padding(6);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(146, 116);
+            this.button17.TabIndex = 10;
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -183,6 +197,46 @@
             this.label5.Size = new System.Drawing.Size(197, 25);
             this.label5.TabIndex = 9;
             this.label5.Text = "Reset OutlookProfil";
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::NAVstatus.Properties.Resources.wifi1;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button3.Location = new System.Drawing.Point(414, 37);
+            this.button3.Margin = new System.Windows.Forms.Padding(6);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(146, 117);
+            this.button3.TabIndex = 4;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::NAVstatus.Properties.Resources.mail;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button5.Location = new System.Drawing.Point(414, 312);
+            this.button5.Margin = new System.Windows.Forms.Padding(6);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(146, 116);
+            this.button5.TabIndex = 8;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::NAVstatus.Properties.Resources.hengelås;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Location = new System.Drawing.Point(414, 173);
+            this.button4.Margin = new System.Windows.Forms.Padding(6);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(146, 118);
+            this.button4.TabIndex = 6;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label4
             // 
@@ -403,6 +457,30 @@
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             // 
+            // button7
+            // 
+            this.button7.BackgroundImage = global::NAVstatus.Properties.Resources.office365;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button7.Location = new System.Drawing.Point(105, 100);
+            this.button7.Margin = new System.Windows.Forms.Padding(6);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(198, 125);
+            this.button7.TabIndex = 3;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = global::NAVstatus.Properties.Resources.Komigang;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.Location = new System.Drawing.Point(539, 100);
+            this.button6.Margin = new System.Windows.Forms.Padding(6);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(150, 125);
+            this.button6.TabIndex = 2;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Console
             // 
             this.Console.Controls.Add(this.tabPage1);
@@ -472,6 +550,20 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = " Info";
             // 
+            // button15
+            // 
+            this.button15.Image = global::NAVstatus.Properties.Resources.tannhjul;
+            this.button15.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button15.Location = new System.Drawing.Point(709, 39);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(176, 199);
+            this.button15.TabIndex = 14;
+            this.button15.Text = "Avanserte instillinger";
+            this.button15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.label24);
@@ -520,7 +612,7 @@
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(90, 25);
             this.label21.TabIndex = 1;
-            this.label21.Text = "1.0.0.14";
+            this.label21.Text = "2.0.0.18";
             // 
             // label2
             // 
@@ -575,6 +667,17 @@
             this.label29.Size = new System.Drawing.Size(195, 25);
             this.label29.TabIndex = 5;
             this.label29.Text = "Programvaresenter";
+            // 
+            // button19
+            // 
+            this.button19.BackgroundImage = global::NAVstatus.Properties.Resources.Programvaresenter;
+            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button19.Location = new System.Drawing.Point(420, 47);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(133, 130);
+            this.button19.TabIndex = 0;
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // groupBox8
             // 
@@ -655,6 +758,16 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::NAVstatus.Properties.Resources.printer;
+            this.pictureBox1.Location = new System.Drawing.Point(62, 13);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(186, 194);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // listViewPrint
             // 
             this.listViewPrint.Location = new System.Drawing.Point(62, 258);
@@ -692,6 +805,17 @@
             this.tabPage7.Size = new System.Drawing.Size(906, 693);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Strøm";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::NAVstatus.Properties.Resources.icons8_electrical_100;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(108, 12);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(6);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(200, 90);
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
             // 
             // button14
             // 
@@ -781,6 +905,17 @@
             this.checkedListBox1.TabIndex = 0;
             this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::NAVstatus.Properties.Resources.strøm_tom;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(580, 12);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(200, 96);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.Transparent;
@@ -798,6 +933,15 @@
             this.tabPage5.Size = new System.Drawing.Size(906, 693);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Logger";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(670, 246);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(215, 114);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 6;
+            this.pictureBox5.TabStop = false;
             // 
             // button18
             // 
@@ -882,6 +1026,16 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::NAVstatus.Properties.Resources.brukerstøtte;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Location = new System.Drawing.Point(247, 94);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(129, 101);
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            // 
             // tabPage8
             // 
             this.tabPage8.BackColor = System.Drawing.Color.Transparent;
@@ -920,160 +1074,6 @@
             this.eventLog1.Log = "NAV";
             this.eventLog1.SynchronizingObject = this;
             // 
-            // button7
-            // 
-            this.button7.BackgroundImage = global::NAVstatus.Properties.Resources.office365;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.Location = new System.Drawing.Point(105, 100);
-            this.button7.Margin = new System.Windows.Forms.Padding(6);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(198, 125);
-            this.button7.TabIndex = 3;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackgroundImage = global::NAVstatus.Properties.Resources.Komigang;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.Location = new System.Drawing.Point(539, 100);
-            this.button6.Margin = new System.Windows.Forms.Padding(6);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(150, 125);
-            this.button6.TabIndex = 2;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button15
-            // 
-            this.button15.Image = global::NAVstatus.Properties.Resources.tannhjul;
-            this.button15.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button15.Location = new System.Drawing.Point(709, 39);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(176, 199);
-            this.button15.TabIndex = 14;
-            this.button15.Text = "Avanserte instillinger";
-            this.button15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
-            // 
-            // button17
-            // 
-            this.button17.BackgroundImage = global::NAVstatus.Properties.Resources.startmeny;
-            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button17.Location = new System.Drawing.Point(414, 449);
-            this.button17.Margin = new System.Windows.Forms.Padding(6);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(146, 116);
-            this.button17.TabIndex = 10;
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::NAVstatus.Properties.Resources.wifi1;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button3.Location = new System.Drawing.Point(414, 37);
-            this.button3.Margin = new System.Windows.Forms.Padding(6);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(146, 117);
-            this.button3.TabIndex = 4;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackgroundImage = global::NAVstatus.Properties.Resources.mail;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(414, 312);
-            this.button5.Margin = new System.Windows.Forms.Padding(6);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(146, 116);
-            this.button5.TabIndex = 8;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = global::NAVstatus.Properties.Resources.hengelås;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Location = new System.Drawing.Point(414, 173);
-            this.button4.Margin = new System.Windows.Forms.Padding(6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(146, 118);
-            this.button4.TabIndex = 6;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button19
-            // 
-            this.button19.BackgroundImage = global::NAVstatus.Properties.Resources.Programvaresenter;
-            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button19.Location = new System.Drawing.Point(420, 47);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(133, 130);
-            this.button19.TabIndex = 0;
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::NAVstatus.Properties.Resources.printer;
-            this.pictureBox1.Location = new System.Drawing.Point(62, 13);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(186, 194);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::NAVstatus.Properties.Resources.icons8_electrical_100;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(108, 12);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(200, 90);
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::NAVstatus.Properties.Resources.strøm_tom;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(580, 12);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(200, 96);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Location = new System.Drawing.Point(670, 246);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(215, 114);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 6;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::NAVstatus.Properties.Resources.brukerstøtte;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(247, 94);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(129, 101);
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            // 
             // Hovedmeny
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
@@ -1106,21 +1106,21 @@
             this.groupBox8.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }

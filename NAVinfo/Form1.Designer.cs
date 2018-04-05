@@ -34,10 +34,10 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.opplæringToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.applikasjonerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.applikasjonerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +63,7 @@
             this.toolStripMenuItem5,
             this.toolStripMenuItem6});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(383, 300);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(383, 256);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // toolStripMenuItem1
@@ -81,6 +81,14 @@
             this.opplæringToolStripMenuItem.Size = new System.Drawing.Size(382, 42);
             this.opplæringToolStripMenuItem.Text = "Opplæring";
             this.opplæringToolStripMenuItem.Click += new System.EventHandler(this.opplæringToolStripMenuItem_Click);
+            // 
+            // applikasjonerToolStripMenuItem
+            // 
+            this.applikasjonerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applikasjonerToolStripMenuItem.Name = "applikasjonerToolStripMenuItem";
+            this.applikasjonerToolStripMenuItem.Size = new System.Drawing.Size(382, 42);
+            this.applikasjonerToolStripMenuItem.Text = "Applikasjoner";
+            this.applikasjonerToolStripMenuItem.Click += new System.EventHandler(this.applikasjonerToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
@@ -103,14 +111,6 @@
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
             this.toolStripMenuItem6.Size = new System.Drawing.Size(382, 42);
             this.toolStripMenuItem6.Text = "Reset outlookprofil";
-            // 
-            // applikasjonerToolStripMenuItem
-            // 
-            this.applikasjonerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.applikasjonerToolStripMenuItem.Name = "applikasjonerToolStripMenuItem";
-            this.applikasjonerToolStripMenuItem.Size = new System.Drawing.Size(382, 42);
-            this.applikasjonerToolStripMenuItem.Text = "Applikasjoner";
-            this.applikasjonerToolStripMenuItem.Click += new System.EventHandler(this.applikasjonerToolStripMenuItem_Click);
             // 
             // Form1
             // 

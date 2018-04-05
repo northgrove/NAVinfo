@@ -791,7 +791,7 @@ namespace NAVinfo
 
         private void button19_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(@"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft System Center\Configuration Manager\programvaresenter.lnk");
+            System.Diagnostics.Process.Start(@"softwarecenter:");
         }
 
         private void label14_Click(object sender, EventArgs e)
