@@ -129,7 +129,7 @@ namespace NAVinfo
             using (PowerShell PS = PowerShell.Create())
             {
                 PS.AddScript(@"$F5ID = (& 'c:\Program Files(x86)\F5 VPN\f5fpc.exe' -info | findstr /r ^[1-9] | ForEach-Object {$_.Substring(0,7)})
-                                & 'c:\Program Files (x86)\F5 VPN\f5fpc.exe' - stop / s $F5ID");
+                                & 'c:\Program Files (x86)\F5 VPN\f5fpc.exe' -stop / s $F5ID");
 
                 Collection<PSObject> PSoutput = PS.Invoke();
                 string output = "";
@@ -148,7 +148,7 @@ namespace NAVinfo
         }
 
 
-        public string resetOutlook()
+        public string resetOutlook(bool FullClean)
         {
             var output = "";
             var username = Environment.GetEnvironmentVariable("USERNAME");
@@ -159,7 +159,7 @@ namespace NAVinfo
             var email4 = System.Text.RegularExpressions.Regex.Replace(email3, "[^A-Za-z0-9.@]", "");
             var userprofile = Environment.GetEnvironmentVariable("USERPROFILE");
             var ostpath = userprofile + "\\appdata\\local\\microsoft\\outlook\\" + username + ".ost";
-
+            var ostdir = userprofile + "\\appdata\\local\\microsoft\\outlook\\*";
 
             try
             {
@@ -181,7 +181,7 @@ namespace NAVinfo
                 output += "klarte ikke å slette outlook profilen i registry # " + ex;
             }
 
-            
+            /* Fjernet for å benytte default profil wizard i outlook
             try
             {
                 ExecuteCommand("c:\\windows\\Nsystem\\profiler.exe", "Outlook " + email4 + " " + ostpath);
@@ -191,13 +191,38 @@ namespace NAVinfo
             {
                 output += "Klarte ikke å opprette ny profil #";
             }
-        
-            
+            */
+            try
+            {
+                ExecuteCommand("Powershell", @"new-item HKCU:\SOFTWARE\Microsoft\Office\16.0\Outlook\Profiles\Outlook");
+                output += "La til ny outlook profil i registry #";
+            }
+            catch (Exception ex)
+            {
+                output += "klarte ikke å legge til ny outlook profil i registry # " + ex;
+            }
+            if (FullClean)
+            {
+                try
+                {
+                    ExecuteCommand("Powershell", @"remove-item -path " + ostdir + " -recurse -force");
+                    output += "Slettet Outlook cache i brukerprofilen # ";
+                }
+                catch
+                {
+                    output += "Klarte ikke å slette Outlook cache i brukerprofilen # ";
+                }
+            }
+            if (!FullClean)
+            {
+                output += "FullClean er ikke valgt # ";
+            }
 
             try
             {
                 //ExecuteCommand("c:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE", "");
                 //ExecuteCommand("outlook", "");
+                System.Threading.Thread.Sleep(1000);
                 System.Diagnostics.Process.Start("outlook");
                 output += "Startet outlook på nytt #";
             }

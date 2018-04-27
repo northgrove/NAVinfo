@@ -351,8 +351,23 @@ namespace NAVinfo
         // Installerer alle skrivere 
         private void button8_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("ms-settings:printers");
+            ProcessStartInfo mssettings = new ProcessStartInfo("ms-settings:printers");
+            mssettings.WindowStyle = ProcessWindowStyle.Maximized;
+            
+            Process.Start(mssettings);
+
+            //System.Diagnostics.Process.Start("ms-settings:printers");
             Printerveiledning installprinter = new Printerveiledning();
+
+            int screenHeight = Screen.PrimaryScreen.WorkingArea.Height - 50;
+            int screenWidth = Screen.PrimaryScreen.WorkingArea.Width - 750;
+
+            
+
+            installprinter.StartPosition = FormStartPosition.Manual;
+           
+            installprinter.Location = new Point(screenWidth);
+
             installprinter.Show();
             
 
@@ -488,11 +503,19 @@ namespace NAVinfo
         //resetter outlook
         private void button5_Click(object sender, EventArgs e)
         {
+            button5.Text = "Resetter..";
+            button5.BackColor = Color.Orange;
             var command = new functions();
+            bool FullClean = false;
 
             try
             {
-                textBox1.AppendText(command.resetOutlook());
+                if (checkBox1.Checked == true)
+                {
+                    FullClean = true;
+                }
+
+                textBox1.AppendText(command.resetOutlook(FullClean));
                 button5.BackColor = Color.Green;
                 button5.Text = "Resatt OK";
             }
@@ -533,9 +556,11 @@ namespace NAVinfo
         //resetter wifi + VPN
         private void button3_Click(object sender, EventArgs e)
         {
+            button3.Text = "Resetter..";
+            button3.BackColor = Color.Orange;
             functions reset = new functions();
             //textBox1.AppendText(reset.resetWiFi()) ;
-            textBox1.AppendText(reset.resetF5VPN());
+            //textBox1.AppendText(reset.resetF5VPN());
             eventLog1.Source = "NAV-Status";
             eventLog1.WriteEntry("Reset WiFi", EventLogEntryType.Information, 1 );
 
@@ -754,6 +779,8 @@ namespace NAVinfo
 
         private void button17_Click(object sender, EventArgs e)
         {
+            button17.BackColor = Color.Orange;
+            button17.Text = "Resetter..";
             var command = new functions();
             var resettSM = command.ExecuteCommand("powershell", "-executionpolicy bypass c:\\Windows\\Mob\\ResetStartmenyPS.ps1");
             if(resettSM)
@@ -818,6 +845,11 @@ namespace NAVinfo
 
             button20.Text = "Resatt OK";
             button20.BackColor = Color.Green;
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

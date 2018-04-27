@@ -44,7 +44,7 @@
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(32, 592);
+            this.textBox1.Location = new System.Drawing.Point(32, 472);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(465, 31);
@@ -53,20 +53,20 @@
             // 
             // textBox2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(32, 34);
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(12, 12);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(532, 56);
+            this.textBox2.Size = new System.Drawing.Size(532, 44);
             this.textBox2.TabIndex = 2;
             this.textBox2.Text = "Installasjon av skrivere:";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::NAVstatus.Properties.Resources.legg_til_skriver;
-            this.pictureBox2.Location = new System.Drawing.Point(32, 713);
+            this.pictureBox2.Location = new System.Drawing.Point(32, 537);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(610, 691);
+            this.pictureBox2.Size = new System.Drawing.Size(561, 626);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -74,9 +74,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::NAVstatus.Properties.Resources.søker_etter_skrivere;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 108);
+            this.pictureBox1.Location = new System.Drawing.Point(32, 62);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(610, 462);
+            this.pictureBox1.Size = new System.Drawing.Size(556, 404);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -85,7 +85,7 @@
             // 
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(32, 1419);
+            this.textBox3.Location = new System.Drawing.Point(32, 1192);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(467, 31);
@@ -96,7 +96,7 @@
             // 
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(32, 1463);
+            this.textBox4.Location = new System.Drawing.Point(32, 1236);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(467, 31);
@@ -107,7 +107,7 @@
             // 
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(32, 1507);
+            this.textBox5.Location = new System.Drawing.Point(32, 1280);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(467, 31);
@@ -116,7 +116,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(504, 1592);
+            this.button1.Location = new System.Drawing.Point(455, 1299);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(138, 80);
             this.button1.TabIndex = 7;
@@ -128,8 +128,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(692, 1703);
+            this.ClientSize = new System.Drawing.Size(627, 1409);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);

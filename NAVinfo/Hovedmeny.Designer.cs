@@ -110,6 +110,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.eventLog1 = new System.Diagnostics.EventLog();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -138,6 +139,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Controls.Add(this.label27);
             this.groupBox2.Controls.Add(this.button17);
             this.groupBox2.Controls.Add(this.label3);
@@ -496,9 +498,9 @@
             this.Console.Location = new System.Drawing.Point(0, 0);
             this.Console.Margin = new System.Windows.Forms.Padding(6);
             this.Console.Name = "Console";
-            this.Console.Padding = new System.Drawing.Point(10, 3);
+            this.Console.Padding = new System.Drawing.Point(8, 3);
             this.Console.SelectedIndex = 0;
-            this.Console.Size = new System.Drawing.Size(922, 750);
+            this.Console.Size = new System.Drawing.Size(914, 782);
             this.Console.TabIndex = 14;
             // 
             // tabPage1
@@ -512,7 +514,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage1.Size = new System.Drawing.Size(906, 693);
+            this.tabPage1.Size = new System.Drawing.Size(898, 725);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Opplæring ";
             // 
@@ -546,7 +548,7 @@
             this.tabPage4.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage4.Size = new System.Drawing.Size(906, 693);
+            this.tabPage4.Size = new System.Drawing.Size(898, 725);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = " Info";
             // 
@@ -612,7 +614,8 @@
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(90, 25);
             this.label21.TabIndex = 1;
-            this.label21.Text = "2.0.0.18";
+            this.label21.Text = "2.0.0.28";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // label2
             // 
@@ -632,7 +635,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage3.Size = new System.Drawing.Size(906, 693);
+            this.tabPage3.Size = new System.Drawing.Size(898, 725);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Verktøy";
             // 
@@ -644,7 +647,7 @@
             this.tabPage2.Controls.Add(this.groupBox8);
             this.tabPage2.Location = new System.Drawing.Point(8, 49);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(906, 693);
+            this.tabPage2.Size = new System.Drawing.Size(898, 725);
             this.tabPage2.TabIndex = 8;
             this.tabPage2.Text = "Applikasjoner";
             // 
@@ -733,7 +736,7 @@
             this.tabPage6.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage6.Size = new System.Drawing.Size(906, 693);
+            this.tabPage6.Size = new System.Drawing.Size(898, 725);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Print";
             // 
@@ -802,7 +805,7 @@
             this.tabPage7.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage7.Size = new System.Drawing.Size(906, 693);
+            this.tabPage7.Size = new System.Drawing.Size(898, 725);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Strøm";
             // 
@@ -930,7 +933,7 @@
             this.tabPage5.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage5.Size = new System.Drawing.Size(906, 693);
+            this.tabPage5.Size = new System.Drawing.Size(898, 725);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Logger";
             // 
@@ -1045,7 +1048,7 @@
             this.tabPage8.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage8.Size = new System.Drawing.Size(906, 693);
+            this.tabPage8.Size = new System.Drawing.Size(898, 725);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Avansert";
             // 
@@ -1074,11 +1077,22 @@
             this.eventLog1.Log = "NAV";
             this.eventLog1.SynchronizingObject = this;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(67, 390);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(192, 29);
+            this.checkBox1.TabIndex = 12;
+            this.checkBox1.Text = "Full opprydding";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Hovedmeny
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(922, 750);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(914, 782);
             this.Controls.Add(this.Console);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -1208,5 +1222,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
