@@ -309,8 +309,10 @@ namespace NAVinfo
             RegistryKey NAVinfoKey = Registry.CurrentUser.OpenSubKey(@"Software\NAVinfo", true);
 
             var stromvalgAC = NAVinfoKey.GetValue("stromvalgAC");
+            //var stromvalgAC = "0";
             var stromvalgDC = NAVinfoKey.GetValue("stromvalgDC");
-            switch(stromvalgAC)
+            //var stromvalgDC = "0";
+            switch (stromvalgAC)
             {
                 case "0":
                     checkedListBox1.SetItemChecked(0, true);
@@ -786,7 +788,7 @@ namespace NAVinfo
             if(resettSM)
             {
                 button17.BackColor = Color.Green;
-                button17.Text = "Resatt OK";
+                button17.Text = "OK";
             }
             if (!(resettSM))
             {
@@ -843,11 +845,30 @@ namespace NAVinfo
             eventLog1.Source = "NAV-Status";
             eventLog1.WriteEntry("Reset SCCM", EventLogEntryType.Information, 11);
 
-            button20.Text = "Resatt OK";
+            button20.Text = "OK";
             button20.BackColor = Color.Green;
         }
 
         private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+        //Fjerner UAC dimming
+        private void button21_Click(object sender, EventArgs e)
+        {
+            button21.Text = "UAC";
+            button21.BackColor = Color.Orange;
+            functions reset = new functions();
+            //textBox1.AppendText(reset.resetWiFi()) ;
+            //textBox1.AppendText(reset.resetF5VPN());
+            eventLog1.Source = "NAV-Status";
+            eventLog1.WriteEntry("Endre UAC", EventLogEntryType.Information, 21);
+
+            button21.Text = "OK";
+            button21.BackColor = Color.Green;
+        }
+
+        private void label30_Click(object sender, EventArgs e)
         {
 
         }
