@@ -29,12 +29,26 @@ namespace NAVinfo
 
         private void opplæringToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://navno.sharepoint.com/sites/Office365Hjelp");
+            System.Diagnostics.Process.Start("https://navno.sharepoint.com/sites/intranett-it/SitePages/Office365.aspx");
         }
 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
-            // laster passord.nav.no i eget browser vindu
+            // laster https://aka.ms/sspr i eget browser vindu
+            byttpassord passordbytte = new byttpassord();
+            passordbytte.Show();
+        }
+
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            // oppretter eventid 22 i NAV source for Pause Bitlocker
+            byttpassord passordbytte = new byttpassord();
+            passordbytte.Show();
+        }
+
+        private void toolStripMenuItem8_Click(object sender, EventArgs e)
+        {
+            // oppretter eventid 23 i NAV source for reset Chrome Nettleserdata
             byttpassord passordbytte = new byttpassord();
             passordbytte.Show();
         }

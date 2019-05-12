@@ -146,7 +146,7 @@ namespace NAVinfo
         // link til passordbytte
         private void button4_Click(object sender, EventArgs e)
         {
-            // laster passord.nav.no i eget browser vindu
+            // laster https://aka.ms/sspr i eget browser vindu
             byttpassord passordbytte = new byttpassord();
             passordbytte.Show();
         }
@@ -161,7 +161,7 @@ namespace NAVinfo
         // link til office 365 hjelp
         private void button7_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://navno.sharepoint.com/sites/Office365Hjelp");
+            System.Diagnostics.Process.Start("https://navno.sharepoint.com/sites/intranett-it/SitePages/Office365.aspx");
         }
 
 

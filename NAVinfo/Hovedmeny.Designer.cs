@@ -433,7 +433,7 @@
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(130, 13);
             this.label18.TabIndex = 1;
-            this.label18.Text = "Innføring i mobilitets PC\'en";
+            this.label18.Text = "Innføring i klientplattformen";
             // 
             // groupBox4
             // 
@@ -521,7 +521,7 @@
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(337, 13);
             this.label25.TabIndex = 14;
-            this.label25.Text = "Har du et forslag om forbedring av mobilitetsløsningen? La oss få høre:";
+            this.label25.Text = "Har du et forslag om forbedring av klientplattformen? La oss få høre:";
             // 
             // tabPage4
             // 
