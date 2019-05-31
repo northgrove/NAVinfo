@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+
 
 namespace NAVinfo
 {
@@ -31,26 +33,49 @@ namespace NAVinfo
         {
             System.Diagnostics.Process.Start("https://navno.sharepoint.com/sites/intranett-it/SitePages/Office365.aspx");
         }
-
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            // oppretter eventid 1 i NAV source for Reset nettverkstilkobling
+            eventLog1.Source = "NAV-Status";
+            eventLog1.WriteEntry("Reset nettverkstilkobling", EventLogEntryType.Information, 1);
+        }
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
             // laster https://aka.ms/sspr i eget browser vindu
-            byttpassord passordbytte = new byttpassord();
-            passordbytte.Show();
+            // Gammel kode: byttpassord passordbytte = new byttpassord();
+            // Gammel kode: passordbytte.Show();
+            System.Diagnostics.Process.Start("https://aka.ms/sspr");
         }
-
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            // oppretter eventid 25 i NAV source for Reset Outlookprofil
+            eventLog1.Source = "NAV-Status";
+            eventLog1.WriteEntry("Reset Outlookprofil", EventLogEntryType.Information, 25);
+        }
         private void toolStripMenuItem7_Click(object sender, EventArgs e)
         {
             // oppretter eventid 22 i NAV source for Pause Bitlocker
-            byttpassord passordbytte = new byttpassord();
-            passordbytte.Show();
+            eventLog1.Source = "NAV-Status";
+            eventLog1.WriteEntry("Pause Bitlocker", EventLogEntryType.Information, 22);
         }
 
         private void toolStripMenuItem8_Click(object sender, EventArgs e)
         {
             // oppretter eventid 23 i NAV source for reset Chrome Nettleserdata
-            byttpassord passordbytte = new byttpassord();
-            passordbytte.Show();
+            eventLog1.Source = "NAV-Status";
+            eventLog1.WriteEntry("Reset Chrome Nettleserdata", EventLogEntryType.Information, 23);
+        }
+        private void toolStripMenuItem9_Click(object sender, EventArgs e)
+        {
+            // oppretter eventid 24 i NAV source for Aktiver Basic Auth
+            eventLog1.Source = "NAV-Status";
+            eventLog1.WriteEntry("Aktiver Basic Auth", EventLogEntryType.Information, 24);
+        }
+        private void toolStripMenuItem10_Click(object sender, EventArgs e)
+        {
+            // Terminerer NAVstatus.exe
+            // System.Diagnostics.Process.Start("notepad.exe");
+            Application.Exit();
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
