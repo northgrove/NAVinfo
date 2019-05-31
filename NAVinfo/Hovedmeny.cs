@@ -147,8 +147,9 @@ namespace NAVinfo
         private void button4_Click(object sender, EventArgs e)
         {
             // laster https://aka.ms/sspr i eget browser vindu
-            byttpassord passordbytte = new byttpassord();
-            passordbytte.Show();
+            // byttpassord passordbytte = new byttpassord();
+            // passordbytte.Show();
+            System.Diagnostics.Process.Start("https://aka.ms/sspr");
         }
 
 
