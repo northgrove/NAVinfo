@@ -27,7 +27,7 @@
     <UpdateUrl>https://navstatus.blob.core.windows.net/navstatus/</UpdateUrl>
     <MinimumRequiredVersion>2.0.0.24</MinimumRequiredVersion>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>26</ApplicationRevision>
+    <ApplicationRevision>30</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>

@@ -596,7 +596,7 @@
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(72, 13);
             this.label22.TabIndex = 2;
-            this.label22.Text = "Mobilt Kontor:";
+            this.label22.Text = "Klientplattform:";
             // 
             // label21
             // 
@@ -606,7 +606,7 @@
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(46, 13);
             this.label21.TabIndex = 1;
-            this.label21.Text = "2.0.0.28";
+            this.label21.Text = "2.0.0.30";
             this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // label2
