@@ -33,15 +33,17 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.opplæringToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.applikasjonerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            //this.opplæringToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            //this.applikasjonerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            //this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            //this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            //this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
             this.eventLog1 = new System.Diagnostics.EventLog();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -63,14 +65,16 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
-            this.opplæringToolStripMenuItem,
-            this.applikasjonerToolStripMenuItem,
-            this.toolStripMenuItem4,
-            this.toolStripMenuItem5,
-            this.toolStripMenuItem6,
+            //this.opplæringToolStripMenuItem,
+            //this.applikasjonerToolStripMenuItem,
+            //this.toolStripMenuItem4,
+            //this.toolStripMenuItem5,
+            //this.toolStripMenuItem6,
             this.toolStripMenuItem7,
             this.toolStripMenuItem8,
             this.toolStripMenuItem9,
+            this.toolStripMenuItem11,
+            this.toolStripMenuItem12,
             this.toolStripMenuItem10});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(383, 256);
@@ -81,55 +85,55 @@
             this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(382, 42);
-            this.toolStripMenuItem1.Text = "Åpne";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.toolStripMenuItem1.Text = "Avanserte funksjoner";
+            //this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // opplæringToolStripMenuItem
             // 
-            this.opplæringToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.opplæringToolStripMenuItem.Name = "opplæringToolStripMenuItem";
-            this.opplæringToolStripMenuItem.Size = new System.Drawing.Size(382, 42);
-            this.opplæringToolStripMenuItem.Text = "Opplæring";
-            this.opplæringToolStripMenuItem.Click += new System.EventHandler(this.opplæringToolStripMenuItem_Click);
+            //this.opplæringToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            //this.opplæringToolStripMenuItem.Name = "opplæringToolStripMenuItem";
+            //this.opplæringToolStripMenuItem.Size = new System.Drawing.Size(382, 42);
+            //this.opplæringToolStripMenuItem.Text = "Opplæring";
+            //this.opplæringToolStripMenuItem.Click += new System.EventHandler(this.opplæringToolStripMenuItem_Click);
             // 
             // applikasjonerToolStripMenuItem
             // 
-            this.applikasjonerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.applikasjonerToolStripMenuItem.Name = "applikasjonerToolStripMenuItem";
-            this.applikasjonerToolStripMenuItem.Size = new System.Drawing.Size(382, 42);
-            this.applikasjonerToolStripMenuItem.Text = "Applikasjoner";
-            this.applikasjonerToolStripMenuItem.Click += new System.EventHandler(this.applikasjonerToolStripMenuItem_Click);
+            // this.applikasjonerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // this.applikasjonerToolStripMenuItem.Name = "applikasjonerToolStripMenuItem";
+            // this.applikasjonerToolStripMenuItem.Size = new System.Drawing.Size(382, 42);
+            // this.applikasjonerToolStripMenuItem.Text = "Applikasjoner";
+            // this.applikasjonerToolStripMenuItem.Click += new System.EventHandler(this.applikasjonerToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
-            this.toolStripMenuItem4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(382, 42);
-            this.toolStripMenuItem4.Text = "Reset nettverkstilkobling";
-            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
+            //this.toolStripMenuItem4.Font = new System.Drawing.Font("Segoe UI", 10F);
+            //this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            //this.toolStripMenuItem4.Size = new System.Drawing.Size(382, 42);
+            //this.toolStripMenuItem4.Text = "Reset nettverkstilkobling";
+            //this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // toolStripMenuItem5
             // 
-            this.toolStripMenuItem5.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(382, 42);
-            this.toolStripMenuItem5.Text = "Reset passord";
-            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
+            //this.toolStripMenuItem5.Font = new System.Drawing.Font("Segoe UI", 10F);
+            //this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            //this.toolStripMenuItem5.Size = new System.Drawing.Size(382, 42);
+            //this.toolStripMenuItem5.Text = "Reset passord";
+            //this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
             // toolStripMenuItem6
             // 
-            this.toolStripMenuItem6.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(382, 42);
-            this.toolStripMenuItem6.Text = "Reset outlookprofil";
-            this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
+            //this.toolStripMenuItem6.Font = new System.Drawing.Font("Segoe UI", 10F);
+            //this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            //this.toolStripMenuItem6.Size = new System.Drawing.Size(382, 42);
+            //this.toolStripMenuItem6.Text = "Reset outlookprofil";
+            //this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
             this.toolStripMenuItem7.Size = new System.Drawing.Size(382, 42);
-            this.toolStripMenuItem7.Text = "Pause Bitlocker";
+            this.toolStripMenuItem7.Text = "Reparer Bitlocker";
             this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
             // 
             // toolStripMenuItem8
@@ -150,11 +154,27 @@
             // 
             // toolStripMenuItem10
             // 
-            this.toolStripMenuItem10.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.toolStripMenuItem10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
             this.toolStripMenuItem10.Size = new System.Drawing.Size(382, 42);
-            this.toolStripMenuItem10.Text = "Avslutt";
+            this.toolStripMenuItem10.Text = "Avslutt NAV-Status";
             this.toolStripMenuItem10.Click += new System.EventHandler(this.toolStripMenuItem10_Click);
+            // 
+            // toolStripMenuItem11
+            // 
+            this.toolStripMenuItem11.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.toolStripMenuItem11.Name = "toolStripMenuItem11";
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(382, 42);
+            this.toolStripMenuItem11.Text = "Aktiver Ethernet";
+            this.toolStripMenuItem11.Click += new System.EventHandler(this.toolStripMenuItem11_Click);
+            // 
+            // toolStripMenuItem12
+            // 
+            this.toolStripMenuItem12.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(382, 42);
+            this.toolStripMenuItem12.Text = "Aktiver UAC Fjernkontroll";
+            this.toolStripMenuItem12.Click += new System.EventHandler(this.toolStripMenuItem12_Click);
             // 
             // eventLog1
             // 
@@ -186,15 +206,17 @@
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        //private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        //private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        //private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
-        private System.Windows.Forms.ToolStripMenuItem opplæringToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem applikasjonerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem11;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem12;
+        //private System.Windows.Forms.ToolStripMenuItem opplæringToolStripMenuItem;
+        //private System.Windows.Forms.ToolStripMenuItem applikasjonerToolStripMenuItem;
         private System.Diagnostics.EventLog eventLog1;
     }
 }

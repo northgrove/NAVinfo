@@ -54,15 +54,20 @@ namespace NAVinfo
                 label21.Text = System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
             }
 
-            label24.Text = Environment.OSVersion.ToString();
+            //label24.Text = Environment.OSVersion.ToString();
+            using (RegistryKey key = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion"))
+            {
+                if (key != null)
+                {
+                    Object o = key.GetValue("ReleaseId");
+                    Object o2 = key.GetValue("CurrentBuildNumber");
+                    label24.Text = o.ToString() + " (" + o2.ToString() + ")";
+                }
+            }
+            
 
 
         }
-
-
-
-
-       
 
 
         private void Hovedmeny_Load(object sender, EventArgs e)
@@ -101,25 +106,25 @@ namespace NAVinfo
             if (connection == true)
 
             {
-                labelwifi.BackColor = Color.Green;
+                //labelwifi.BackColor = Color.Green;
                 labelwifi.Text = "Tilkoblet";
 
             }
             else
             {
-                labelwifi.BackColor = Color.Red;
+                //labelwifi.BackColor = Color.Red;
                 labelwifi.Text = "Ikke tilkoblet";
             }
 
             // sjekker internett forbindelse
             if (functions.CheckForInternetConnection())
             {
-                labelinet.BackColor = Color.Green;
+                //labelinet.BackColor = Color.Green;
                 labelinet.Text = "Tilkoblet";
             }
             else
             {
-                labelinet.BackColor = Color.Red;
+                //labelinet.BackColor = Color.Red;
                 labelinet.Text = "Ikke tilkoblet";
             }
 
@@ -127,12 +132,12 @@ namespace NAVinfo
             var strom = SystemInformation.PowerStatus.PowerLineStatus.ToString();
             if (strom == "Online")
             {
-                labelstrom.BackColor = Color.Green;
+                //labelstrom.BackColor = Color.Green;
                 labelstrom.Text = "Tilkoblet";
             }
             else
             {
-                labelstrom.BackColor = Color.Red;
+                //labelstrom.BackColor = Color.Red;
                 labelstrom.Text = "Ikke tilkoblet";
             }
 
@@ -156,7 +161,7 @@ namespace NAVinfo
         // Link til Office 365 hjelp
         private void button6_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("C:\\Windows\\Mob\\kom i gang.exe");
+            System.Diagnostics.Process.Start("https://komigang.az.adeo.no");
         }
 
         // link til office 365 hjelp
@@ -177,7 +182,7 @@ namespace NAVinfo
                     //lesEventlog();
                     break;
                 case 4:
-                    mapPrint();
+                    //mapPrint();
                     break;
                 case 5:
                     openStrom();
@@ -243,66 +248,66 @@ namespace NAVinfo
         }
 
         // Sjekker om NAV Skrivere er installert
-        private void mapPrint()
-        {
-            listViewPrint.Items.Clear();
-            listViewPrint.Columns.Add("Printer", 200);
-            listViewPrint.Columns.Add("Status", 200);
-
-            var print2 = Printer.IsPrinterInstalled("FargeDuplexCloud");
-            if (print2)
-            {
-                string[] printer = { "FargeDuplex", "Tilkoblet" };
-                var listViewItem = new ListViewItem(printer);
-                listViewPrint.Items.Add(listViewItem);
-            }
-            else
-            {
-                string[] printer = { "FargeDuplex", "Frakoblet" };
-                var listViewItem = new ListViewItem(printer);
-                listViewPrint.Items.Add(listViewItem);
-            }
-            var print3 = Printer.IsPrinterInstalled("SortDuplexCloud");
-            if (print3)
-            {
-                string[] printer = { "SortDuplex", "Tilkoblet" };
-                var listViewItem = new ListViewItem(printer);
-                listViewPrint.Items.Add(listViewItem);
-            }
-            else
-            {
-                string[] printer = { "SortDuplex", "Frakoblet" };
-                var listViewItem = new ListViewItem(printer);
-                listViewPrint.Items.Add(listViewItem);
-            }
-            var print4 = Printer.IsPrinterInstalled("FargeSimplexCloud");
-            if (print4)
-            {
-                string[] printer = { "FargeSimplex", "Tilkoblet" };
-                var listViewItem = new ListViewItem(printer);
-                listViewPrint.Items.Add(listViewItem);
-            }
-            else
-            {
-                string[] printer = { "FargeSimplex", "Frakoblet" };
-                var listViewItem = new ListViewItem(printer);
-                listViewPrint.Items.Add(listViewItem);
-            }
-            var print5 = Printer.IsPrinterInstalled("SortSimplexCloud");
-            if (print5)
-            {
-                string[] printer = { "SortSimplex", "Tilkoblet" };
-                var listViewItem = new ListViewItem(printer);
-                listViewPrint.Items.Add(listViewItem);
-            }
-            else
-            {
-                string[] printer = { "SortSimplex", "Frakoblet" };
-                var listViewItem = new ListViewItem(printer);
-                listViewPrint.Items.Add(listViewItem);
-            }
-
-        }
+        //private void mapPrint()
+        //{
+        //    listViewPrint.Items.Clear();
+        //    listViewPrint.Columns.Add("Printer", 200);
+        //    listViewPrint.Columns.Add("Status", 200);
+        //
+        //    var print2 = Printer.IsPrinterInstalled("FargeDuplexCloud");
+        //    if (print2)
+        //    {
+        //        string[] printer = { "FargeDuplex", "Tilkoblet" };
+        //        var listViewItem = new ListViewItem(printer);
+        //        listViewPrint.Items.Add(listViewItem);
+        //    }
+        //    else
+        //    {
+        //        string[] printer = { "FargeDuplex", "Frakoblet" };
+        //        var listViewItem = new ListViewItem(printer);
+        //        listViewPrint.Items.Add(listViewItem);
+        //    }
+        //    var print3 = Printer.IsPrinterInstalled("SortDuplexCloud");
+        //    if (print3)
+        //    {
+        //        string[] printer = { "SortDuplex", "Tilkoblet" };
+        //        var listViewItem = new ListViewItem(printer);
+        //        listViewPrint.Items.Add(listViewItem);
+        //    }
+        //    else
+        //    {
+        //        string[] printer = { "SortDuplex", "Frakoblet" };
+        //        var listViewItem = new ListViewItem(printer);
+        //        listViewPrint.Items.Add(listViewItem);
+        //    }
+        //    var print4 = Printer.IsPrinterInstalled("FargeSimplexCloud");
+        //    if (print4)
+        //    {
+        //        string[] printer = { "FargeSimplex", "Tilkoblet" };
+        //        var listViewItem = new ListViewItem(printer);
+        //        listViewPrint.Items.Add(listViewItem);
+        //    }
+        //    else
+        //    {
+        //        string[] printer = { "FargeSimplex", "Frakoblet" };
+        //        var listViewItem = new ListViewItem(printer);
+        //        listViewPrint.Items.Add(listViewItem);
+        //    }
+        //    var print5 = Printer.IsPrinterInstalled("SortSimplexCloud");
+        //    if (print5)
+        //    {
+        //        string[] printer = { "SortSimplex", "Tilkoblet" };
+        //        var listViewItem = new ListViewItem(printer);
+        //        listViewPrint.Items.Add(listViewItem);
+        //    }
+        //    else
+        //    {
+        //        string[] printer = { "SortSimplex", "Frakoblet" };
+        //        var listViewItem = new ListViewItem(printer);
+        //        listViewPrint.Items.Add(listViewItem);
+        //    }
+        //
+        //}
 
         //Leser strøminstillinger ved valg av strøm fanen
         public void openStrom()
@@ -518,7 +523,7 @@ namespace NAVinfo
                     FullClean = true;
                 }
 
-                textBox1.AppendText(command.resetOutlook(FullClean));
+                textBox2.AppendText(command.resetOutlook(FullClean));
                 button5.BackColor = Color.Green;
                 button5.Text = "Resatt OK";
             }
@@ -526,7 +531,7 @@ namespace NAVinfo
             {
                 button5.Text = "Feilet";
                 button5.BackColor = Color.Red;
-                textBox1.AppendText(err.ToString());
+                textBox2.AppendText(err.ToString());
             }
 
         }
@@ -556,19 +561,27 @@ namespace NAVinfo
         }
 
 
-        //resetter wifi + VPN
+        //Legg inn skrivere
         private void button3_Click(object sender, EventArgs e)
         {
-            button3.Text = "Resetter..";
-            button3.BackColor = Color.Orange;
-            functions reset = new functions();
-            //textBox1.AppendText(reset.resetWiFi()) ;
-            //textBox1.AppendText(reset.resetF5VPN());
-            eventLog1.Source = "NAV-Status";
-            eventLog1.WriteEntry("Reset WiFi", EventLogEntryType.Information, 1 );
+            ProcessStartInfo mssettings = new ProcessStartInfo("ms-settings:printers");
+            mssettings.WindowStyle = ProcessWindowStyle.Maximized;
 
-            button3.Text = "Resatt OK";
-            button3.BackColor = Color.Green;
+            Process.Start(mssettings);
+
+            //System.Diagnostics.Process.Start("ms-settings:printers");
+            Printerveiledning installprinter = new Printerveiledning();
+
+            int screenHeight = Screen.PrimaryScreen.WorkingArea.Height - 50;
+            int screenWidth = Screen.PrimaryScreen.WorkingArea.Width - 750;
+
+
+
+            installprinter.StartPosition = FormStartPosition.Manual;
+
+            installprinter.Location = new Point(screenWidth);
+
+            installprinter.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -604,7 +617,7 @@ namespace NAVinfo
             }
 
 
-            button11.Text = "Slettet !!";
+            //button11.Text = "Slettet !!";
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -625,7 +638,7 @@ namespace NAVinfo
             }
             catch (Exception ex)
             {
-                textBox1.Text += "Klarte ikke å kopiere NAV-User.log og NAV-System.log: " +ex;
+                textBox2.Text += "Klarte ikke å kopiere NAV-User.log og NAV-System.log: " +ex;
             }
 
             //samler Application eventloggen
@@ -659,7 +672,7 @@ namespace NAVinfo
             }
             catch (Exception ex)
             {
-                textBox1.Text += "Klarte ikke å hente inn application event loggen" + ex;
+                textBox2.Text += "Klarte ikke å hente inn application event loggen" + ex;
             }
 
             //SAmler System evnt loggen
@@ -691,7 +704,7 @@ namespace NAVinfo
             }
             catch (Exception ex)
             {
-                textBox1.Text += "Klarte ikke å hente inn System event loggen " + ex;
+                textBox2.Text += "Klarte ikke å hente inn System event loggen " + ex;
             }
 
             var sysinfofile = "C:\\temp\\sysinfo.cmd";
@@ -713,7 +726,7 @@ namespace NAVinfo
             }
             catch (Exception ex)
             {
-                textBox1.Text += "Samling av SysInf feilet" + ex;
+                textBox2.Text += "Samling av SysInf feilet" + ex;
             }
 
 
@@ -752,7 +765,7 @@ namespace NAVinfo
             }
             catch (Exception ex)
             {
-                textBox1.Text += "Klarte ikke å lage mail til brukerstøtte " + ex;
+                textBox2.Text += "Klarte ikke å lage mail til brukerstøtte " + ex;
             }
 
         }
@@ -795,7 +808,7 @@ namespace NAVinfo
             {
                 button17.BackColor = Color.Red;
                 button17.Text = "Feilet";
-                textBox1.Text = "Restting av Start-Menyen feilet";
+                textBox2.Text = "Restting av Start-Menyen feilet";
             }
 
         }
@@ -811,12 +824,29 @@ namespace NAVinfo
             // capture entire screen, and save it to a file
             Image img = sc.CaptureScreen();
             // display image in a Picture control named imageDisplay
-            this.pictureBox5.Image = img;
+            //this.pictureBox5.Image = img;
             
             // capture this window, and save it
             //sc.CaptureWindowToFile(this.Handle, "C:\\temp\\logger\\screen.gif", ImageFormat.Gif);
             sc.CaptureScreenToFile("C:\\temp\\logger\\screen.gif", ImageFormat.Gif);
             
+        }
+
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        private void panel1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
         }
 
         private void button19_Click(object sender, EventArgs e)
@@ -855,21 +885,131 @@ namespace NAVinfo
 
         }
         //Fjerner UAC dimming
-        private void button21_Click(object sender, EventArgs e)
-        {
-            button21.Text = "UAC";
-            button21.BackColor = Color.Orange;
-            functions reset = new functions();
-            //textBox1.AppendText(reset.resetWiFi()) ;
-            //textBox1.AppendText(reset.resetF5VPN());
-            eventLog1.Source = "NAV-Status";
-            eventLog1.WriteEntry("Endre UAC", EventLogEntryType.Information, 21);
-
-            button21.Text = "OK";
-            button21.BackColor = Color.Green;
-        }
+        //private void button21_Click(object sender, EventArgs e)
+        //{
+        //    button21.Text = "UAC";
+        //    button21.BackColor = Color.Orange;
+        //    functions reset = new functions();
+        //    //textBox1.AppendText(reset.resetWiFi()) ;
+        //    //textBox1.AppendText(reset.resetF5VPN());
+        //    eventLog1.Source = "NAV-Status";
+        //    eventLog1.WriteEntry("Endre UAC", EventLogEntryType.Information, 21);
+        //
+        //    button21.Text = "OK";
+        //    button21.BackColor = Color.Green;
+        //}
 
         private void label30_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://navno.sharepoint.com/sites/intranett-it/SitePages/Office365.aspx");
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://komigang.az.adeo.no");
+        }
+
+        private void label18_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label31_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(label24.Text);
+
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelwifi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label34_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label33_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button15_Click_1(object sender, EventArgs e)
+        {
+
+            button20.Text = "Resetter ...";
+            eventLog1.Source = "NAV-Status";
+            eventLog1.WriteEntry("Reset SCCM", EventLogEntryType.Information, 11);
+
+            button20.Text = "OK";
+            button20.BackColor = Color.Green;
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label34_Click_1(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("c:\\windows\\cmtrace.exe", "c:\\windows\\ccmsetup\\logs\\ccmsetup.log");
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

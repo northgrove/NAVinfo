@@ -27,7 +27,7 @@
     <UpdateUrl>https://navstatus.blob.core.windows.net/navstatus/</UpdateUrl>
     <MinimumRequiredVersion>2.0.0.24</MinimumRequiredVersion>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>30</ApplicationRevision>
+    <ApplicationRevision>31</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -132,6 +132,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ScreenCapture.cs" />
     <EmbeddedResource Include="byttpassord.resx">
       <DependentUpon>byttpassord.cs</DependentUpon>
@@ -147,14 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="NAVinfo_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -270,6 +270,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="NAV_Ikon.ico" />
+    <Content Include="Resources\Image1.png" />
+    <None Include="Resources\SCCM_96x96.png" />
+    <None Include="Resources\NAV-logo-trans.png" />
+    <None Include="Resources\o365big.png" />
+    <None Include="Resources\NAV-logo_160x100_white.png" />
     <None Include="Resources\legg til skriver.png" />
     <None Include="Resources\søker etter skrivere.png" />
     <None Include="Resources\Programvaresenter.png" />

@@ -153,6 +153,46 @@ namespace NAVstatus.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap NAV_logo_160x100_white {
+            get {
+                object obj = ResourceManager.GetObject("NAV-logo_160x100_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NAV_logo_160x100_white1 {
+            get {
+                object obj = ResourceManager.GetObject("NAV-logo_160x100_white1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NAV_logo_trans {
+            get {
+                object obj = ResourceManager.GetObject("NAV-logo-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap o365big {
+            get {
+                object obj = ResourceManager.GetObject("o365big", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap office365 {
             get {
                 object obj = ResourceManager.GetObject("office365", resourceCulture);
@@ -216,6 +256,16 @@ namespace NAVstatus.Properties {
         internal static System.Drawing.Bitmap Programvaresenter {
             get {
                 object obj = ResourceManager.GetObject("Programvaresenter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SCCM_96x96 {
+            get {
+                object obj = ResourceManager.GetObject("SCCM_96x96", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
