@@ -56,13 +56,10 @@
             this.label20 = new System.Windows.Forms.Label();
             this.Console = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label31 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -70,18 +67,12 @@
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.button15 = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.button17 = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -93,13 +84,28 @@
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.eventLog1 = new System.Diagnostics.EventLog();
             this.label14 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.button20 = new System.Windows.Forms.Button();
             this.label29 = new System.Windows.Forms.Label();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button19 = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.Console.SuspendLayout();
@@ -117,9 +123,11 @@
             this.tabPage7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
+            this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.SuspendLayout();
             // 
             // checkBox1
@@ -410,15 +418,6 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = " Info";
             // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::NAVstatus.Properties.Resources.NAV_logo_trans;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel2.Location = new System.Drawing.Point(41, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(645, 325);
-            this.panel2.TabIndex = 16;
-            // 
             // label31
             // 
             this.label31.AutoSize = true;
@@ -453,17 +452,6 @@
             this.panel1.TabIndex = 15;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button6
-            // 
-            this.button6.BackgroundImage = global::NAVstatus.Properties.Resources.Komigang;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.Location = new System.Drawing.Point(421, 35);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(144, 144);
-            this.button6.TabIndex = 7;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click_1);
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -473,18 +461,6 @@
             this.label18.TabIndex = 6;
             this.label18.Text = "Kom i gang med Windows 10";
             this.label18.Click += new System.EventHandler(this.label18_Click_1);
-            // 
-            // button7
-            // 
-            this.button7.BackgroundImage = global::NAVstatus.Properties.Resources.o365big;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.Location = new System.Drawing.Point(112, 35);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(232, 144);
-            this.button7.TabIndex = 5;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // label17
             // 
@@ -520,6 +496,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.groupBox9);
+            this.panel3.Controls.Add(this.groupBox8);
             this.panel3.Controls.Add(this.groupBox12);
             this.panel3.Controls.Add(this.groupBox11);
             this.panel3.Controls.Add(this.groupBox7);
@@ -564,18 +542,6 @@
             this.label32.Text = "Reset Programvaresenteret\r\n(Kan ta opptil 15minutter)";
             this.label32.Click += new System.EventHandler(this.label32_Click);
             // 
-            // button15
-            // 
-            this.button15.BackgroundImage = global::NAVstatus.Properties.Resources.SCCM_96x96;
-            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button15.Location = new System.Drawing.Point(6, 18);
-            this.button15.Margin = new System.Windows.Forms.Padding(2);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(48, 45);
-            this.button15.TabIndex = 3;
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click_1);
-            // 
             // groupBox11
             // 
             this.groupBox11.Controls.Add(this.button17);
@@ -586,19 +552,6 @@
             this.groupBox11.TabIndex = 16;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Startmeny";
-            // 
-            // button17
-            // 
-            this.button17.BackgroundImage = global::NAVstatus.Properties.Resources.startmeny;
-            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button17.Location = new System.Drawing.Point(6, 19);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(48, 45);
-            this.button17.TabIndex = 10;
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // groupBox7
             // 
@@ -612,19 +565,6 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Outlook";
             // 
-            // button5
-            // 
-            this.button5.BackgroundImage = global::NAVstatus.Properties.Resources.mail;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(6, 19);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(48, 45);
-            this.button5.TabIndex = 8;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.button4);
@@ -636,17 +576,6 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Passord";
             // 
-            // button4
-            // 
-            this.button4.BackgroundImage = global::NAVstatus.Properties.Resources.hengelås;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Location = new System.Drawing.Point(6, 19);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(48, 45);
-            this.button4.TabIndex = 6;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button1);
@@ -657,19 +586,6 @@
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Utskrift";
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::NAVstatus.Properties.Resources.printer;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(6, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 45);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button3_Click);
             // 
             // label26
             // 
@@ -690,19 +606,6 @@
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nettverkstilkobling";
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::NAVstatus.Properties.Resources.wifi1;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button3.Location = new System.Drawing.Point(6, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(48, 45);
-            this.button3.TabIndex = 4;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label23
             // 
@@ -834,26 +737,6 @@
             this.checkedListBox1.TabIndex = 0;
             this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::NAVstatus.Properties.Resources.icons8_electrical_100;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(175, 28);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 45);
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::NAVstatus.Properties.Resources.strøm_tom;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(411, 28);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 48);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
             // eventLog1
             // 
             this.eventLog1.Log = "NAV";
@@ -898,6 +781,199 @@
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(96, 13);
             this.label29.TabIndex = 5;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.button2);
+            this.groupBox8.Controls.Add(this.label1);
+            this.groupBox8.Location = new System.Drawing.Point(100, 326);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(200, 72);
+            this.groupBox8.TabIndex = 16;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Bitlocker";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(60, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Reparer Bitlocker";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.button8);
+            this.groupBox9.Controls.Add(this.label19);
+            this.groupBox9.Location = new System.Drawing.Point(381, 326);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(200, 72);
+            this.groupBox9.TabIndex = 16;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Nettleserdata";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(60, 35);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(136, 13);
+            this.label19.TabIndex = 5;
+            this.label19.Text = "Tøm nettleserdata i Chrome";
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::NAVstatus.Properties.Resources.NAV_logo_trans;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel2.Location = new System.Drawing.Point(41, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(645, 325);
+            this.panel2.TabIndex = 16;
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = global::NAVstatus.Properties.Resources.Komigang;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.Location = new System.Drawing.Point(421, 35);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(144, 144);
+            this.button6.TabIndex = 7;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            // 
+            // button7
+            // 
+            this.button7.BackgroundImage = global::NAVstatus.Properties.Resources.o365big;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.Location = new System.Drawing.Point(112, 35);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(232, 144);
+            this.button7.TabIndex = 5;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            // 
+            // button8
+            // 
+            this.button8.BackgroundImage = global::NAVstatus.Properties.Resources.Chrome_Trans1;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button8.Location = new System.Drawing.Point(6, 19);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(48, 45);
+            this.button8.TabIndex = 4;
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::NAVstatus.Properties.Resources.Bitlocker;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button2.Location = new System.Drawing.Point(6, 19);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(48, 45);
+            this.button2.TabIndex = 4;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_2);
+            // 
+            // button15
+            // 
+            this.button15.BackgroundImage = global::NAVstatus.Properties.Resources.SCCM_96x96;
+            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button15.Location = new System.Drawing.Point(6, 18);
+            this.button15.Margin = new System.Windows.Forms.Padding(2);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(48, 45);
+            this.button15.TabIndex = 3;
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click_1);
+            // 
+            // button17
+            // 
+            this.button17.BackgroundImage = global::NAVstatus.Properties.Resources.startmeny;
+            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button17.Location = new System.Drawing.Point(6, 19);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(48, 45);
+            this.button17.TabIndex = 10;
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::NAVstatus.Properties.Resources.mail;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button5.Location = new System.Drawing.Point(6, 19);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(48, 45);
+            this.button5.TabIndex = 8;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::NAVstatus.Properties.Resources.hengelås;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Location = new System.Drawing.Point(6, 19);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(48, 45);
+            this.button4.TabIndex = 6;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::NAVstatus.Properties.Resources.printer;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.Location = new System.Drawing.Point(6, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(48, 45);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::NAVstatus.Properties.Resources.wifi1;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button3.Location = new System.Drawing.Point(6, 19);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(48, 45);
+            this.button3.TabIndex = 4;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::NAVstatus.Properties.Resources.icons8_electrical_100;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(175, 28);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 45);
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::NAVstatus.Properties.Resources.strøm_tom;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(411, 28);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 48);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
             // 
             // button19
             // 
@@ -954,9 +1030,13 @@
             this.tabPage7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1034,5 +1114,11 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
     }
 }

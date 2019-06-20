@@ -39,7 +39,7 @@
             //this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             //this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            //this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,7 +71,7 @@
             //this.toolStripMenuItem5,
             //this.toolStripMenuItem6,
             this.toolStripMenuItem7,
-            this.toolStripMenuItem8,
+            // this.toolStripMenuItem8,
             this.toolStripMenuItem9,
             this.toolStripMenuItem11,
             this.toolStripMenuItem12,
@@ -85,7 +85,7 @@
             this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(382, 42);
-            this.toolStripMenuItem1.Text = "Avanserte funksjoner";
+            this.toolStripMenuItem1.Text = "Avanserte funksjoner:";
             //this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // opplæringToolStripMenuItem
@@ -133,16 +133,16 @@
             this.toolStripMenuItem7.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
             this.toolStripMenuItem7.Size = new System.Drawing.Size(382, 42);
-            this.toolStripMenuItem7.Text = "Reparer Bitlocker";
+            this.toolStripMenuItem7.Text = "Pause Bitlocker";
             this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
             // 
             // toolStripMenuItem8
             // 
-            this.toolStripMenuItem8.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(382, 42);
-            this.toolStripMenuItem8.Text = "Slett nettleserdata";
-            this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
+            // this.toolStripMenuItem8.Font = new System.Drawing.Font("Segoe UI", 10F);
+            // this.toolStripMenuItem8.Name = "toolStripMenuItem8";
+            // this.toolStripMenuItem8.Size = new System.Drawing.Size(382, 42);
+            // this.toolStripMenuItem8.Text = "Slett nettleserdata";
+            // this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
             // 
             // toolStripMenuItem9
             // 
@@ -210,7 +210,7 @@
         //private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         //private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
+        // private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem11;

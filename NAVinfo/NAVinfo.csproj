@@ -270,6 +270,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="NAV_Ikon.ico" />
+    <None Include="Resources\Chrome_Trans.png" />
+    <None Include="Resources\Chrome_Trans1.png" />
+    <None Include="Resources\Bitlocker.jpg" />
     <Content Include="Resources\Image1.png" />
     <None Include="Resources\SCCM_96x96.png" />
     <None Include="Resources\NAV-logo-trans.png" />

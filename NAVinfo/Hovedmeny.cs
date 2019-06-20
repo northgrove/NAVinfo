@@ -1013,6 +1013,26 @@ namespace NAVinfo
         {
 
         }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            button20.Text = "Reparerer";
+            eventLog1.Source = "NAV-Status";
+            eventLog1.WriteEntry("Reparer Bitlocker", EventLogEntryType.Information, 22);
+
+            button20.Text = "OK";
+            button20.BackColor = Color.Green;
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            button20.Text = "Tømmer";
+            eventLog1.Source = "NAV-Status";
+            eventLog1.WriteEntry("Tøm Chrome Nettleserdata", EventLogEntryType.Information, 23);
+
+            button20.Text = "OK";
+            button20.BackColor = Color.Green;
+        }
     }
 
     }

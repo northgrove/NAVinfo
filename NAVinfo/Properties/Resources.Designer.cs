@@ -63,9 +63,39 @@ namespace NAVstatus.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bitlocker {
+            get {
+                object obj = ResourceManager.GetObject("Bitlocker", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap brukerstøtte {
             get {
                 object obj = ResourceManager.GetObject("brukerstøtte", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chrome_Trans {
+            get {
+                object obj = ResourceManager.GetObject("Chrome_Trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chrome_Trans1 {
+            get {
+                object obj = ResourceManager.GetObject("Chrome_Trans1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

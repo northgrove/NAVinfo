@@ -59,12 +59,13 @@ namespace NAVinfo
             eventLog1.WriteEntry("Reparer Bitlocker", EventLogEntryType.Information, 22);
         }
 
-        private void toolStripMenuItem8_Click(object sender, EventArgs e)
-        {
-            // oppretter eventid 23 i NAV source for reset Chrome Nettleserdata
-            eventLog1.Source = "NAV-Status";
-            eventLog1.WriteEntry("Reset Chrome Nettleserdata", EventLogEntryType.Information, 23);
-        }
+        // private void toolStripMenuItem8_Click(object sender, EventArgs e)
+        // {
+        //     // oppretter eventid 23 i NAV source for reset Chrome Nettleserdata
+        //     eventLog1.Source = "NAV-Status";
+        //     eventLog1.WriteEntry("Reset Chrome Nettleserdata", EventLogEntryType.Information, 23);
+        // }
+
         private void toolStripMenuItem9_Click(object sender, EventArgs e)
         {
             // oppretter eventid 24 i NAV source for Aktiver Basic Auth
