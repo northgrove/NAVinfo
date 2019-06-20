@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hovedmeny));
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -47,6 +48,9 @@
             this.label16 = new System.Windows.Forms.Label();
             this.labelstrom = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -56,26 +60,42 @@
             this.label20 = new System.Windows.Forms.Label();
             this.Console = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label31 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Beskrivelse = new System.Windows.Forms.LinkLabel();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
+            this.button15 = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.button17 = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label36 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.button14 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -84,36 +104,32 @@
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.eventLog1 = new System.Diagnostics.EventLog();
             this.label14 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.button20 = new System.Windows.Forms.Button();
             this.label29 = new System.Windows.Forms.Label();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button19 = new System.Windows.Forms.Button();
+            this.Passord = new System.Windows.Forms.ToolTip(this.components);
+            this.Startmeny = new System.Windows.Forms.ToolTip(this.components);
+            this.Programvaresenter = new System.Windows.Forms.ToolTip(this.components);
+            this.Nettleserdata = new System.Windows.Forms.ToolTip(this.components);
+            this.Utskrift = new System.Windows.Forms.ToolTip(this.components);
+            this.Nettverkstilkobling = new System.Windows.Forms.ToolTip(this.components);
+            this.Outlook = new System.Windows.Forms.ToolTip(this.components);
+            this.Bitlocker = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Console.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -123,11 +139,9 @@
             this.tabPage7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
-            this.groupBox8.SuspendLayout();
-            this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.SuspendLayout();
             // 
             // checkBox1
@@ -140,6 +154,7 @@
             this.checkBox1.TabIndex = 12;
             this.checkBox1.Text = "Full opprydding";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label27
             // 
@@ -218,7 +233,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(359, 20);
+            this.label10.Location = new System.Drawing.Point(379, 40);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(34, 13);
             this.label10.TabIndex = 4;
@@ -227,7 +242,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(144, 20);
+            this.label11.Location = new System.Drawing.Point(141, 21);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 13);
             this.label11.TabIndex = 5;
@@ -262,7 +277,7 @@
             // labelwifi
             // 
             this.labelwifi.AutoSize = true;
-            this.labelwifi.Location = new System.Drawing.Point(485, 20);
+            this.labelwifi.Location = new System.Drawing.Point(505, 40);
             this.labelwifi.Name = "labelwifi";
             this.labelwifi.Size = new System.Drawing.Size(47, 13);
             this.labelwifi.TabIndex = 10;
@@ -272,7 +287,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(359, 60);
+            this.label16.Location = new System.Drawing.Point(379, 77);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(37, 13);
             this.label16.TabIndex = 11;
@@ -281,7 +296,7 @@
             // labelstrom
             // 
             this.labelstrom.AutoSize = true;
-            this.labelstrom.Location = new System.Drawing.Point(485, 60);
+            this.labelstrom.Location = new System.Drawing.Point(505, 77);
             this.labelstrom.Name = "labelstrom";
             this.labelstrom.Size = new System.Drawing.Size(41, 13);
             this.labelstrom.TabIndex = 12;
@@ -289,6 +304,9 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.pictureBox1);
+            this.groupBox3.Controls.Add(this.label35);
+            this.groupBox3.Controls.Add(this.label30);
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Controls.Add(this.label24);
@@ -315,10 +333,40 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Informasjon";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::NAVstatus.Properties.Resources.Phone;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(508, 18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(17, 16);
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(530, 21);
+            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(64, 13);
+            this.label35.TabIndex = 18;
+            this.label35.Text = "21 07 15 50";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(379, 21);
+            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(67, 13);
+            this.label30.TabIndex = 17;
+            this.label30.Text = "Brukerstøtte:";
+            // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(359, 97);
+            this.label22.Location = new System.Drawing.Point(379, 120);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(107, 13);
@@ -328,7 +376,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(485, 79);
+            this.label21.Location = new System.Drawing.Point(505, 99);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(46, 13);
@@ -339,7 +387,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(485, 98);
+            this.label24.Location = new System.Drawing.Point(505, 121);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(42, 13);
@@ -350,7 +398,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(359, 79);
+            this.label2.Location = new System.Drawing.Point(379, 99);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 13);
@@ -365,13 +413,13 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(185, 99);
+            this.textBox2.Size = new System.Drawing.Size(185, 86);
             this.textBox2.TabIndex = 15;
             // 
             // labelinet
             // 
             this.labelinet.AutoSize = true;
-            this.labelinet.Location = new System.Drawing.Point(485, 40);
+            this.labelinet.Location = new System.Drawing.Point(505, 58);
             this.labelinet.Name = "labelinet";
             this.labelinet.Size = new System.Drawing.Size(46, 13);
             this.labelinet.TabIndex = 14;
@@ -380,7 +428,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(359, 40);
+            this.label20.Location = new System.Drawing.Point(379, 58);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(49, 13);
             this.label20.TabIndex = 13;
@@ -393,6 +441,7 @@
             this.Console.Controls.Add(this.tabPage3);
             this.Console.Controls.Add(this.tabPage7);
             this.Console.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Console.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Console.HotTrack = true;
             this.Console.ItemSize = new System.Drawing.Size(112, 41);
             this.Console.Location = new System.Drawing.Point(0, 0);
@@ -418,12 +467,22 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = " Info";
             // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::NAVstatus.Properties.Resources.NAV_logo_trans;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel2.Location = new System.Drawing.Point(41, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(645, 325);
+            this.panel2.TabIndex = 16;
+            // 
             // label31
             // 
             this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.Location = new System.Drawing.Point(686, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(14, 13);
+            this.label31.Size = new System.Drawing.Size(15, 13);
             this.label31.TabIndex = 15;
             this.label31.Text = "X";
             this.label31.Click += new System.EventHandler(this.label31_Click);
@@ -452,6 +511,17 @@
             this.panel1.TabIndex = 15;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button6
+            // 
+            this.button6.BackgroundImage = global::NAVstatus.Properties.Resources.Komigang;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.Location = new System.Drawing.Point(421, 35);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(144, 144);
+            this.button6.TabIndex = 7;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -461,6 +531,18 @@
             this.label18.TabIndex = 6;
             this.label18.Text = "Kom i gang med Windows 10";
             this.label18.Click += new System.EventHandler(this.label18_Click_1);
+            // 
+            // button7
+            // 
+            this.button7.BackgroundImage = global::NAVstatus.Properties.Resources.o365big;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.Location = new System.Drawing.Point(112, 35);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(232, 144);
+            this.button7.TabIndex = 5;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // label17
             // 
@@ -474,9 +556,10 @@
             // label25
             // 
             this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.Location = new System.Drawing.Point(686, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(14, 13);
+            this.label25.Size = new System.Drawing.Size(15, 13);
             this.label25.TabIndex = 14;
             this.label25.Text = "X";
             this.label25.Click += new System.EventHandler(this.label25_Click);
@@ -496,6 +579,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.Beskrivelse);
             this.panel3.Controls.Add(this.groupBox9);
             this.panel3.Controls.Add(this.groupBox8);
             this.panel3.Controls.Add(this.groupBox12);
@@ -508,6 +592,87 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(684, 509);
             this.panel3.TabIndex = 16;
+            // 
+            // Beskrivelse
+            // 
+            this.Beskrivelse.AutoSize = true;
+            this.Beskrivelse.Location = new System.Drawing.Point(276, 453);
+            this.Beskrivelse.Name = "Beskrivelse";
+            this.Beskrivelse.Size = new System.Drawing.Size(132, 13);
+            this.Beskrivelse.TabIndex = 18;
+            this.Beskrivelse.TabStop = true;
+            this.Beskrivelse.Text = "Beskrivelse av verktøyene";
+            this.Beskrivelse.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Beskrivelse_LinkClicked);
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.button8);
+            this.groupBox9.Controls.Add(this.label19);
+            this.groupBox9.Location = new System.Drawing.Point(381, 326);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(200, 72);
+            this.groupBox9.TabIndex = 16;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Nettleserdata";
+            // 
+            // button8
+            // 
+            this.button8.BackgroundImage = global::NAVstatus.Properties.Resources.Chrome_Trans1;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button8.Location = new System.Drawing.Point(6, 19);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(48, 45);
+            this.button8.TabIndex = 4;
+            this.Nettleserdata.SetToolTip(this.button8, "Sletter alle nettleserdata i Chrome som kan brukes hvis\r\ndu har problemer med Chr" +
+        "ome.\r\nNettleserlogg, informasjonskapsler (cookies), \r\nnettstedsdata, bufrede bil" +
+        "der og filer vil slettes.");
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click_1);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(60, 35);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(136, 13);
+            this.label19.TabIndex = 5;
+            this.label19.Text = "Tøm nettleserdata i Chrome";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.button2);
+            this.groupBox8.Controls.Add(this.label1);
+            this.groupBox8.Location = new System.Drawing.Point(100, 326);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(200, 72);
+            this.groupBox8.TabIndex = 16;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Bitlocker";
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::NAVstatus.Properties.Resources.Bitlocker;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button2.Location = new System.Drawing.Point(6, 19);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(48, 45);
+            this.button2.TabIndex = 4;
+            this.Bitlocker.SetToolTip(this.button2, resources.GetString("button2.ToolTip"));
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_2);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(60, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Reparer Bitlocker";
             // 
             // groupBox12
             // 
@@ -537,10 +702,23 @@
             this.label32.Location = new System.Drawing.Point(58, 34);
             this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(136, 26);
+            this.label32.Size = new System.Drawing.Size(136, 13);
             this.label32.TabIndex = 12;
-            this.label32.Text = "Reset Programvaresenteret\r\n(Kan ta opptil 15minutter)";
+            this.label32.Text = "Reset Programvaresenteret";
             this.label32.Click += new System.EventHandler(this.label32_Click);
+            // 
+            // button15
+            // 
+            this.button15.BackgroundImage = global::NAVstatus.Properties.Resources.SCCM_96x96;
+            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button15.Location = new System.Drawing.Point(6, 18);
+            this.button15.Margin = new System.Windows.Forms.Padding(2);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(48, 45);
+            this.button15.TabIndex = 3;
+            this.Programvaresenter.SetToolTip(this.button15, resources.GetString("button15.ToolTip"));
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click_1);
             // 
             // groupBox11
             // 
@@ -552,6 +730,21 @@
             this.groupBox11.TabIndex = 16;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Startmeny";
+            // 
+            // button17
+            // 
+            this.button17.BackgroundImage = global::NAVstatus.Properties.Resources.startmeny;
+            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button17.Location = new System.Drawing.Point(6, 19);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(48, 45);
+            this.button17.TabIndex = 10;
+            this.Startmeny.SetToolTip(this.button17, "Fjerner alle tiles i startmenyen din, og setter opp standard \r\nNAV-tiles slik det" +
+        " var når maskinen var ny");
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // groupBox7
             // 
@@ -565,6 +758,20 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Outlook";
             // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::NAVstatus.Properties.Resources.mail;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button5.Location = new System.Drawing.Point(6, 19);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(48, 45);
+            this.button5.TabIndex = 8;
+            this.Outlook.SetToolTip(this.button5, resources.GetString("button5.ToolTip"));
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.button4);
@@ -576,6 +783,18 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Passord";
             // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::NAVstatus.Properties.Resources.hengelås;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Location = new System.Drawing.Point(6, 19);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(48, 45);
+            this.button4.TabIndex = 6;
+            this.Passord.SetToolTip(this.button4, "Åpner en nettside hvor du kan endre passordet ditt");
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button1);
@@ -586,6 +805,21 @@
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Utskrift";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::NAVstatus.Properties.Resources.printer;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.Location = new System.Drawing.Point(6, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(48, 45);
+            this.button1.TabIndex = 4;
+            this.Utskrift.SetToolTip(this.button1, "Åpner siden der du kan legge til skrivere, \r\nog viser en hjelpeside som gir veile" +
+        "dning\r\ni hvordan legge til skrivere.");
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button3_Click);
             // 
             // label26
             // 
@@ -607,12 +841,27 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nettverkstilkobling";
             // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::NAVstatus.Properties.Resources.wifi1;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button3.Location = new System.Drawing.Point(6, 19);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(48, 45);
+            this.button3.TabIndex = 4;
+            this.Nettverkstilkobling.SetToolTip(this.button3, resources.GetString("button3.ToolTip"));
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // label23
             // 
             this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(686, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(14, 13);
+            this.label23.Size = new System.Drawing.Size(15, 13);
             this.label23.TabIndex = 15;
             this.label23.Text = "X";
             this.label23.Click += new System.EventHandler(this.label23_Click);
@@ -621,7 +870,7 @@
             // 
             this.tabPage7.BackColor = System.Drawing.Color.White;
             this.tabPage7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tabPage7.Controls.Add(this.richTextBox1);
+            this.tabPage7.Controls.Add(this.label36);
             this.tabPage7.Controls.Add(this.label33);
             this.tabPage7.Controls.Add(this.button14);
             this.tabPage7.Controls.Add(this.button10);
@@ -637,21 +886,23 @@
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Strøm";
             // 
-            // richTextBox1
+            // label36
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(137, 394);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(409, 34);
-            this.richTextBox1.TabIndex = 18;
-            this.richTextBox1.Text = "OBS! Modus 1 og Modus 5 vil gjøre at maskinen ikke slår seg av.\nHusk på dette før" +
-    " du legger maskinen i en sekk/bag da den kan overopphetes.";
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(134, 406);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(381, 26);
+            this.label36.TabIndex = 19;
+            this.label36.Text = "OBS! Modus 1 og Modus 5 vil gjøre at maskinen ikke slår seg av.\r\nHusk på dette fø" +
+    "r du legger maskinen i en sekk/bag da den kan overopphetes.";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.Location = new System.Drawing.Point(686, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(14, 13);
+            this.label33.Size = new System.Drawing.Size(15, 13);
             this.label33.TabIndex = 16;
             this.label33.Text = "X";
             this.label33.Click += new System.EventHandler(this.label33_Click);
@@ -737,6 +988,26 @@
             this.checkedListBox1.TabIndex = 0;
             this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::NAVstatus.Properties.Resources.icons8_electrical_100;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(175, 28);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 45);
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::NAVstatus.Properties.Resources.strøm_tom;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(411, 28);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 48);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
             // eventLog1
             // 
             this.eventLog1.Log = "NAV";
@@ -782,199 +1053,6 @@
             this.label29.Size = new System.Drawing.Size(96, 13);
             this.label29.TabIndex = 5;
             // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.button2);
-            this.groupBox8.Controls.Add(this.label1);
-            this.groupBox8.Location = new System.Drawing.Point(100, 326);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(200, 72);
-            this.groupBox8.TabIndex = 16;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Bitlocker";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(60, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Reparer Bitlocker";
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.button8);
-            this.groupBox9.Controls.Add(this.label19);
-            this.groupBox9.Location = new System.Drawing.Point(381, 326);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(200, 72);
-            this.groupBox9.TabIndex = 16;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Nettleserdata";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(60, 35);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(136, 13);
-            this.label19.TabIndex = 5;
-            this.label19.Text = "Tøm nettleserdata i Chrome";
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::NAVstatus.Properties.Resources.NAV_logo_trans;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel2.Location = new System.Drawing.Point(41, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(645, 325);
-            this.panel2.TabIndex = 16;
-            // 
-            // button6
-            // 
-            this.button6.BackgroundImage = global::NAVstatus.Properties.Resources.Komigang;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.Location = new System.Drawing.Point(421, 35);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(144, 144);
-            this.button6.TabIndex = 7;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click_1);
-            // 
-            // button7
-            // 
-            this.button7.BackgroundImage = global::NAVstatus.Properties.Resources.o365big;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.Location = new System.Drawing.Point(112, 35);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(232, 144);
-            this.button7.TabIndex = 5;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
-            // 
-            // button8
-            // 
-            this.button8.BackgroundImage = global::NAVstatus.Properties.Resources.Chrome_Trans1;
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button8.Location = new System.Drawing.Point(6, 19);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(48, 45);
-            this.button8.TabIndex = 4;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click_1);
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::NAVstatus.Properties.Resources.Bitlocker;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button2.Location = new System.Drawing.Point(6, 19);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(48, 45);
-            this.button2.TabIndex = 4;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_2);
-            // 
-            // button15
-            // 
-            this.button15.BackgroundImage = global::NAVstatus.Properties.Resources.SCCM_96x96;
-            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button15.Location = new System.Drawing.Point(6, 18);
-            this.button15.Margin = new System.Windows.Forms.Padding(2);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(48, 45);
-            this.button15.TabIndex = 3;
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click_1);
-            // 
-            // button17
-            // 
-            this.button17.BackgroundImage = global::NAVstatus.Properties.Resources.startmeny;
-            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button17.Location = new System.Drawing.Point(6, 19);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(48, 45);
-            this.button17.TabIndex = 10;
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackgroundImage = global::NAVstatus.Properties.Resources.mail;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(6, 19);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(48, 45);
-            this.button5.TabIndex = 8;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = global::NAVstatus.Properties.Resources.hengelås;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Location = new System.Drawing.Point(6, 19);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(48, 45);
-            this.button4.TabIndex = 6;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::NAVstatus.Properties.Resources.printer;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(6, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 45);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::NAVstatus.Properties.Resources.wifi1;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button3.Location = new System.Drawing.Point(6, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(48, 45);
-            this.button3.TabIndex = 4;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::NAVstatus.Properties.Resources.icons8_electrical_100;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(175, 28);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 45);
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::NAVstatus.Properties.Resources.strøm_tom;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(411, 28);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 48);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
             // button19
             // 
             this.button19.BackgroundImage = global::NAVstatus.Properties.Resources.Programvaresenter;
@@ -986,6 +1064,38 @@
             this.button19.TabIndex = 0;
             this.button19.UseVisualStyleBackColor = true;
             this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // Passord
+            // 
+            this.Passord.ToolTipTitle = "Passord";
+            // 
+            // Startmeny
+            // 
+            this.Startmeny.ToolTipTitle = "Startmeny";
+            // 
+            // Programvaresenter
+            // 
+            this.Programvaresenter.ToolTipTitle = "Programvaresenter";
+            // 
+            // Nettleserdata
+            // 
+            this.Nettleserdata.ToolTipTitle = "Nettleserdata";
+            // 
+            // Utskrift
+            // 
+            this.Utskrift.ToolTipTitle = "Utskrift";
+            // 
+            // Nettverkstilkobling
+            // 
+            this.Nettverkstilkobling.ToolTipTitle = "Nettverkstilkobling";
+            // 
+            // Outlook
+            // 
+            this.Outlook.ToolTipTitle = "Outlook";
+            // 
+            // Bitlocker
+            // 
+            this.Bitlocker.ToolTipTitle = "Bitlocker";
             // 
             // Hovedmeny
             // 
@@ -1004,6 +1114,7 @@
             this.Load += new System.EventHandler(this.Hovedmeny_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Console.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
@@ -1014,6 +1125,11 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.groupBox11.ResumeLayout(false);
@@ -1030,13 +1146,9 @@
             this.tabPage7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1113,12 +1225,24 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel Beskrivelse;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.ToolTip Passord;
+        private System.Windows.Forms.ToolTip Nettleserdata;
+        private System.Windows.Forms.ToolTip Programvaresenter;
+        private System.Windows.Forms.ToolTip Startmeny;
+        private System.Windows.Forms.ToolTip Utskrift;
+        private System.Windows.Forms.ToolTip Nettverkstilkobling;
+        private System.Windows.Forms.ToolTip Bitlocker;
+        private System.Windows.Forms.ToolTip Outlook;
+        private System.Windows.Forms.Label label36;
     }
 }

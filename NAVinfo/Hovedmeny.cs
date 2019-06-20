@@ -746,14 +746,14 @@ namespace NAVinfo
 
                 Outlook.Application app = new Outlook.Application();
                 
-                Outlook.MailItem mailItem = app.CreateItem(Outlook.OlItemType.olMailItem);
+                //Outlook.MailItem mailItem = app.CreateItem(Outlook.OlItemType.olMailItem);
                 //Outlook.MailItem mailItem = (Outlook.MailItem)app.CreateItem(Outlook.OlItemType.olMailItem);
-                mailItem.Subject = "Diagnostic informasjon fra " + Environment.MachineName + " " + bruker;
+                //mailItem.Subject = "Diagnostic informasjon fra " + Environment.MachineName + " " + bruker;
                 //mailItem.To = "someone@example.com";
                 //mailItem.Body = "This is the message.";
-                mailItem.Attachments.Add("c:\\temp\\logger_" + random + ".zip");
-                mailItem.Importance = Outlook.OlImportance.olImportanceLow;
-                mailItem.Display(true);
+                //mailItem.Attachments.Add("c:\\temp\\logger_" + random + ".zip");
+                //mailItem.Importance = Outlook.OlImportance.olImportanceLow;
+                //mailItem.Display(true);
 
                 File.Delete("c:\\temp\\logger_" + random + ".zip");
 
@@ -1032,6 +1032,21 @@ namespace NAVinfo
 
             button20.Text = "OK";
             button20.BackColor = Color.Green;
+        }
+
+        private void Beskrivelse_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://navno.sharepoint.com/sites/intranett-it/SitePages/NAV-Status---nyttige-verktoy-til-selvhjelp.aspx");
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -148,9 +148,6 @@
   <data name="wifi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wifi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="strøm-tom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\strøm-tom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="strøm-full" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strøm-full.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -162,6 +159,9 @@
   </data>
   <data name="NAV-logo_160x100_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NAV-logo_160x100_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tannhjul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tannhjul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Chrome_Trans1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chrome_Trans1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,6 +181,9 @@
   <data name="startmeny" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\startmeny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Bitlocker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bitlocker.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SCCM_96x96" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SCCM_96x96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -196,8 +199,8 @@
   <data name="print1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\print1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tannhjul" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tannhjul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="strøm-tom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strøm-tom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,7 +211,7 @@
   <data name="outlook" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\outlook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Bitlocker" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bitlocker.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Phone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Phone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

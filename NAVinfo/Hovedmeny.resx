@@ -117,6 +117,61 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="Nettleserdata.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>482, 17</value>
+  </metadata>
+  <metadata name="Bitlocker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>949, 17</value>
+  </metadata>
+  <data name="button2.ToolTip" xml:space="preserve">
+    <value>Fjerner behov for å skrive inn bitlocker-nøkkel ved
+neste oppstart. Dette vil igjen få Windows til å 
+godta eventuelle endringer som har skjedd på
+maskinen, og i den forbindelse "reparere" Bitlocker.</value>
+  </data>
+  <metadata name="Programvaresenter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>327, 17</value>
+  </metadata>
+  <data name="button15.ToolTip" xml:space="preserve">
+    <value>Sletter Programvaresenteret og installerer det på nytt
+hvis du har problemer med å installere programmer.
+Etter installasjon vil den bruke litt tid på å synkronisere
+seg opp før den er klar for bruk igjen. Vennligst vent
+15 minutter fra du trykker på knappen før du prøver 
+Programvaresenteret igjen.</value>
+  </data>
+  <metadata name="Startmeny.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>220, 17</value>
+  </metadata>
+  <metadata name="Outlook.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>853, 17</value>
+  </metadata>
+  <data name="button5.ToolTip" xml:space="preserve">
+    <value>Fjerner Outlook-profilen din, og lager den på nytt.
+Dette vil rette opp potensielle feil som kan oppstå i 
+Outlook. Dette vil IKKE fjerne e-post eller annet 
+innhold i Outlook, det er kun tilkoblingen til serveren 
+som lages på nytt.
+
+Bruk "Reset Outlook Profil" først, og hvis ikke det 
+hjelper huker du av for "Full opprydding" og 
+trykker "Reset Outlook Profil" på nytt.</value>
+  </data>
+  <metadata name="Passord.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>126, 17</value>
+  </metadata>
+  <metadata name="Utskrift.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>607, 17</value>
+  </metadata>
+  <metadata name="Nettverkstilkobling.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>698, 17</value>
+  </metadata>
+  <data name="button3.ToolTip" xml:space="preserve">
+    <value>Slår av det trådløse nettverkskortet, og slår det på igjen. 
+Deretter vil den koble seg tilbake på det trådløse nettet 
+du sist var tilkoblet. Dette kan kjøres hvis du har problemer 
+med å komme ut på Internett.</value>
+  </data>
   <metadata name="eventLog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

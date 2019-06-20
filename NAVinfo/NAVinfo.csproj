@@ -270,6 +270,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="NAV_Ikon.ico" />
+    <None Include="Resources\Phone.png" />
     <None Include="Resources\Chrome_Trans.png" />
     <None Include="Resources\Chrome_Trans1.png" />
     <None Include="Resources\Bitlocker.jpg" />
